@@ -1,0 +1,2 @@
+# SplatoonStageScheduler
+electronでマルチプラットフォームなスケジュールをパッと見れるやつが作りたい
