@@ -1,0 +1,11 @@
+body{
+    background-image: url("cache/back_normal.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+
+.trim img
+{
+
+}

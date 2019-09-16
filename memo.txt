@@ -4,3 +4,7 @@ npm run build
 そのうちreadmeに入れること
 electron必須
 npm installとか
+
+npm install request
+
+画像はニコニコモンズから
