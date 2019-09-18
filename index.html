@@ -2,12 +2,20 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
     <title>Splatoon Stage Scheduler</title>
     <link rel="stylesheet" href="style.css">
 </head>
     <body>
-        <div class="trim">
-            <img src="cache/container.png" alt="コンテナ">
+        
+        <div>
+            <div id=nowBattle>XX:XX ~ XX:XX</div>
+            <ul class="battleNavi">
+            <li id="regular">レギュラー</li>
+            <li id="gachi">ガチ</li>
+            <li id="league">リーグ</li>
+            </ul>
         </div>
+        <script src="makeSchedule.js"></script>
     </body>
 </html>

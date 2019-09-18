@@ -1,25 +1,31 @@
 "use strict";
 
-const electron = require("electron");
+const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
-let mainWindow;
+var mainWindow = null;
 
-// 全てのウィンドウが閉じたら終了
-app.on('window-all-closed', function() {
+function CreateWindow () {
+  mainWindow = new BrowserWindow({
+    maxWidth: 800,
+    maxHeight: 600,
+    webPreferences:{
+      nodeIntegration: true
+    }
+  });
+  
+  mainWindow.setMenu(null);
+  mainWindow.loadFile("index.html");
+  mainWindow.webContents.openDevTools();
+  mainWindow.on('closed', ()=>{
+    mainWindow = null;
+  });
+}
+
+app.on('ready', CreateWindow);
+
+app.on('window-all-closed', ()=>{
   if (process.platform != 'darwin') {
     app.quit();
   }
-});
-
-// Electronの初期化完了後に実行
-app.on('ready', function() {
-  // メイン画面の表示。ウィンドウの幅、高さを指定できる
-  mainWindow = new BrowserWindow({maxWidth: 800, maxHeight: 600});
-  mainWindow.loadURL('file://' + __dirname + '/index.html');
-
-  // ウィンドウが閉じられたらアプリも終了
-  mainWindow.on('closed', function() {
-    mainWindow = null;
-  });
 });

@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/yotugi-vip/SplatoonStageScheduler/issues"
   },
-  "homepage": "https://github.com/yotugi-vip/SplatoonStageScheduler#readme"
+  "homepage": "https://github.com/yotugi-vip/SplatoonStageScheduler#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
 }

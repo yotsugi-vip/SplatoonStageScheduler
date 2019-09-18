@@ -5,7 +5,19 @@ body{
     background-position: bottom;
 }
 
-.trim img
-{
+div#nowBattle{
+    text-align: center;    
+}
 
+ul{
+    font-size: 0;
+    text-align: center;
+}
+
+li{
+    background-color: #dadada;
+    display: inline-block;
+    font-size: 12px;
+    width: 25%;
+    text-align: center;
 }
