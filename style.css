@@ -1,23 +1,49 @@
 body{
-    background-image: url("cache/back_normal.jpg");
+    background-image: url("images/back_normal.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: bottom;
 }
 
-div#nowBattle{
-    text-align: center;    
+.timeZone{
+    text-align: center;
+    font-weight: 900;
+    font-size: large;
 }
 
 ul{
+    padding-left: 0;
+    list-style-type: none;
     font-size: 0;
     text-align: center;
 }
 
 li{
-    background-color: #dadada;
     display: inline-block;
-    font-size: 12px;
-    width: 25%;
+    font-size: large;
+    width:233px;
     text-align: center;
+    font-weight: 900;
+    
+}
+
+.image_abusolute{
+    position: relative;
+}
+
+.stage1{
+    width: 200px;
+    height: 130px;
+    position: absolute;
+    clip-path: polygon(99% 0, 0 99%, 0 0);
+}
+
+.stage2{
+    width: 200px;
+    height: 130px;
+    clip-path: polygon(100% 1%, 1% 100%, 100% 100%);
+}
+
+.stageName{
+    font-size: 12px;
 }

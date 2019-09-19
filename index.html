@@ -9,13 +9,33 @@
     <body>
         
         <div>
-            <div id=nowBattle>XX:XX ~ XX:XX</div>
+            <div class="timeZone">XX:XX ~ XX:XX</div>
             <ul class="battleNavi">
-            <li id="regular">レギュラー</li>
-            <li id="gachi">ガチ</li>
-            <li id="league">リーグ</li>
+                <li class="regular">レギュラー
+                    <div class="image_absolute">
+                        <img src="cache/海女美術大学.png" class="stage1">
+                        <img src="cache/スメーシーワールド.png" class="stage2">
+                    </div>
+                    <div class="stageName">
+                        <p>海女美術大学</p>
+                        <p>スメーシーワールド</p>
+                    </div>
+                </li>
+                <li id="gachi">ガチ
+                    <div class="image_absolute">
+                            <img src="cache/海女美術大学.png" class="stage1">
+                            <img src="cache/スメーシーワールド.png" class="stage2">
+                    </div>
+                </li>
+                <li id="league">リーグ
+                    <div class="image_absolute">
+                            <img src="cache/海女美術大学.png" class="stage1">
+                            <img src="cache/スメーシーワールド.png" class="stage2">
+                    </div>
+                </li>
             </ul>
         </div>
         <script src="makeSchedule.js"></script>
+        <div id="google"></div>
     </body>
 </html>
