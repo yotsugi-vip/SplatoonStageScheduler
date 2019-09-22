@@ -44,6 +44,6 @@ li{
     clip-path: polygon(100% 1%, 1% 100%, 100% 100%);
 }
 
-.stageName{
+.stageName1, .stageName2, .stageName{
     font-size: 12px;
 }
