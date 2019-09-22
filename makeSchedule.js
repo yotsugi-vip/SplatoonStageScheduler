@@ -2,7 +2,20 @@
 var fs = require('fs');
 var fetch = require('node-fetch');
 
-function makeSchedule(){
+
+async function checkCache( name, url ) {
+    try {
+        fs.statSync(`cache/${name}.png`);
+    } catch { 
+        var response = await fetch(url);
+        var buff     = await response.arrayBuffer();
+        var uIntBuff = new Uint8Array(buff);
+        fs.writeFileSync(`cache/${name}.png`, uIntBuff, 'binary');
+    }
+    return `cache/${name}.png`;
+}
+
+async function makeSchedule(){
     var content  = document.getElementById('template').content;
     var fragment = document.createDocumentFragment();
 
@@ -12,8 +25,12 @@ function makeSchedule(){
     for( var cnt = 0; cnt < 12; cnt++ ) {
         var time    = content.querySelector('.timeZone');
         var regular = content.querySelector('.regular');
-        var gachi   = content.querySelector('gachi');
-        var league  = content.querySelector('league');
+        var gachi   = content.querySelector('.gachi');
+        var league  = content.querySelector('.league');
+        console.log(content);
+        console.log(regular);
+        console.log(gachi);
+        console.log(league);
 
         // 開催時間設定
         var start = new Date( Date.parse(schedule.result.regular[cnt].start_utc) );
@@ -21,63 +38,51 @@ function makeSchedule(){
         time.textContent = `${start.getHours()}:00 〜 ${end.getHours()}:00`;
 
         //レギュラーマッチ
-        var img1 = regular.querySelector('.image_abusolute');
-        var img2 = regular.querySelector('.stage2');
-        var stageName1 = regular.querySelector('.stageName1');
-        var stageName2 = regular.querySelector('.stageName2');
-        stageName1.textContent = `${schedule.result.regular[cnt].maps[0]}`;
-        stageName2.textContent = `${schedule.result.regular[cnt].maps[1]}`;
+        var ruler    = regular.querySelector('.rule');
+        var img1r    = regular.querySelector('.stage1');
+        var img2r    = regular.querySelector('.stage2');
+        var stageName1r = regular.querySelector('.stageName1');
+        var stageName2r = regular.querySelector('.stageName2');
 
-       
+        ruler.textContent = `${schedule.result.regular[cnt].rule}`;
+        img1r.src  = await checkCache( schedule.result.regular[cnt].maps[0], schedule.result.regular[cnt].maps_ex[0].image );
+        img2r.src  = await checkCache( schedule.result.regular[cnt].maps[1], schedule.result.regular[cnt].maps_ex[1].image );
+        stageName1r.textContent = `${schedule.result.regular[cnt].maps[0]}`;
+        stageName2r.textContent = `${schedule.result.regular[cnt].maps[1]}`;
+
+        //ガチ
+        var ruleg    = gachi.querySelector('.rule');
+        var img1g    = gachi.querySelector('.stage1');
+        var img2g    = gachi.querySelector('.stage2');
+        var stageName1g = gachi.querySelector('.stageName1');
+        var stageName2g = gachi.querySelector('.stageName2');
+
+        ruleg.textContent = `${schedule.result.gachi[cnt].rule}`;
+        img1g.src  = await checkCache( schedule.result.gachi[cnt].maps[0], schedule.result.gachi[cnt].maps_ex[0].image );
+        img2g.src  = await checkCache( schedule.result.gachi[cnt].maps[1], schedule.result.gachi[cnt].maps_ex[1].image );
+        stageName1g.textContent = `${schedule.result.gachi[cnt].maps[0]}`;
+        stageName2g.textContent = `${schedule.result.gachi[cnt].maps[1]}`;
+
+
+        //リーグ
+        var rulel    = league.querySelector('.rule');
+        var img1l    = league.querySelector('.stage1');
+        var img2l    = league.querySelector('.stage2');
+        var stageName1l = league.querySelector('.stageName1');
+        var stageName2l = league.querySelector('.stageName2');
+
+        rulel.textContent = `${schedule.result.league[cnt].rule}`;
+        img1l.src  = await checkCache( schedule.result.league[cnt].maps[0], schedule.result.league[cnt].maps_ex[0].image );
+        img2l.src  = await checkCache( schedule.result.league[cnt].maps[1], schedule.result.league[cnt].maps_ex[1].image );
+        stageName1l.textContent = `${schedule.result.league[cnt].maps[0]}`;
+        stageName2l.textContent = `${schedule.result.league[cnt].maps[1]}`;
+
+
+        
         var clone = document.importNode(content, true);
         fragment.appendChild(clone);
     }
-    console.log(fragment);
     document.body.appendChild(fragment);
 }
 
-function checkCache( name, address ) {
-    // キャッシュにあるか確認
-    try {
-        fs.statSync(`cache/${name}.png`);
-    } catch(err) {
-        fetch(address)
-        .then( Response => {
-            Response.blob()
-            .then(result=>{
-                console.log(result);
-                var reader = new FileReader();
-                reader.readAsArrayBuffer(result)
-                .then(result=>{
-                    fs.writeFileSync( `cache/${name}.png`, result );
-                });  
-            });
-                    
-        });
-    }
-}
-
-
-
-// templateから要素取り出し
-//var frg = document.createDocumentFragment();
-//var content = document.getElementById('test').content;
-//
-//for( var a = 0; a <10; a++ ){
-//    var img = content.querySelector('img');
-//    var ele = content.querySelector('div');
-//    
-//    
-//    img.src = "cache/海女美術大学.png";
-//    img.classList.add("stage1");
-//    
-//    ele.textContent = a;
-//    ele.classList.add('timeZone');
-//    
-//    var clone = document.importNode(content, true);
-//    frg.appendChild(clone);
-//}
-//document.body.appendChild(frg);
-
-//makeSchedule();
-checkCache( "ホテルニューオートロ", "https://app.splatoon2.nintendo.net/images/stage/98a7d7a4009fae9fb7479554535425a5a604e88e.png" );
+makeSchedule();

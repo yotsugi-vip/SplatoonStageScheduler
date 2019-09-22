@@ -6,12 +6,12 @@
     <title>Splatoon Stage Scheduler</title>
     <link rel="stylesheet" href="style.css">
 </head>
-    <body>
-        
+    <body>        
         <template id="template">
             <div class="timeZone"></div>
             <ul class="battleNavi">
                 <li class="regular">
+                    <div class="rule"></div>
                     <div class="image_absolute">
                         <img src="" class="stage1">
                         <img src="" class="stage2">
@@ -19,65 +19,27 @@
                     <div class="stageName1"></div>
                     <div class="stageName2"></div>
                 </li>
-                <li id="gachi">
+                <li class="gachi">
+                    <div class="rule"></div>
                     <div class="image_absolute">
                             <img src="" class="stage1">
                             <img src="" class="stage2">
                     </div>
-                    <div class="stageName">
-                    </div>
+                    <div class="stageName1"></div>
+                    <div class="stageName2"></div>
                 </li>
-                <li id="league">
+                <li class="league">
+                    <div class="rule"></div>
                     <div class="image_absolute">
                             <img src="" class="stage1">
                             <img src="" class="stage2">
                     </div>
-                    <div class="stageName">
-                    </div>
+                    <div class="stageName1"></div>
+                    <div class="stageName2"></div>
                 </li>
             </ul>
             <br>
         </template>
-
-        <div>
-            <div class="timeZone">XX:XX ~ XX:XX</div>
-            <ul class="battleNavi">
-                <li class="regular">レギュラー
-                    <div class="image_absolute">
-                        <img src="cache/海女美術大学.png" class="stage1">
-                        <img src="cache/スメーシーワールド.png" class="stage2">
-                    </div>
-                    <div class="stageName">
-                        海女美術大学<br>
-                        スメーシーワールド
-                    </div>
-                </li>
-                <li id="gachi">ガチ
-                    <div class="image_absolute">
-                            <img src="cache/海女美術大学.png" class="stage1">
-                            <img src="cache/スメーシーワールド.png" class="stage2">
-                    </div>
-                    <div class="stageName">
-                        海女美術大学<br>
-                        スメーシーワールド
-                    </div>
-                </li>
-                <li id="league">リーグ
-                    <div class="image_absolute">
-                            <img src="cache/海女美術大学.png" class="stage1">
-                            <img src="cache/スメーシーワールド.png" class="stage2">
-                    </div>
-                    <div class="stageName">
-                        海女美術大学<br>
-                        スメーシーワールド
-                    </div>
-                </li>
-            </ul>
-            <br>
-        </div>
-                
-       
-        <div id="google"></div>
     </body>
     <script src="makeSchedule.js"></script>
 </html>
