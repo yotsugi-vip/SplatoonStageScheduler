@@ -15,30 +15,76 @@ async function checkCache( name, url ) {
     return `cache/${name}.png`;
 }
 
+async function getSchedule(){
+
+    var needDl = true;
+    try{
+        fs.statSync('cache/schedule.json');
+        var file = fs.readFileSync('cache/schedule.json', 'utf8');
+        var schedule = JSON.parse(file);
+        var battleSchedule = Date.parse(schedule.result.regular[0].end_utc);
+        var now    =  Date.parse(new Date());
+
+        //現在〜24時間のスケジュールを取得しているので、現在のレギュラーマッチ時間帯から判断
+        if( battleSchedule > now ) {
+            console.log('最新のスケジュールデータ');
+            needDl = false;
+        }else{
+            console.log('古いスケジュールデータ')
+        }
+    }catch{
+        console.log('スケジュールデータが存在しません')
+    }
+
+    if(needDl) {
+        var spl = 'https://spla2.yuu26.com/schedule'; 
+        var option = {
+            method: 'GET',
+            headers:{
+                'Content-Type':'application/json',
+                'User-Agent':'yotugi(email:harukipdr@gmail.com)'
+            }
+        }
+        
+        var response = await fetch( spl, option);
+        var body = await response.json(); 
+
+        try{
+            fs.writeFileSync( "cache/schedule.json", JSON.stringify( body, null, '\t' ) );
+        }catch(e){
+            console.log(e);
+        }
+ 
+    }else{
+        console.log("最新のデータのため、更新は行いません")
+    }
+}
+
 async function makeSchedule(){
+
     var content  = document.getElementById('template').content;
     var fragment = document.createDocumentFragment();
 
-    var file = fs.readFileSync('test/schedule.json', 'utf8');
+    var file = fs.readFileSync('cache/schedule.json', 'utf8');
     var schedule = JSON.parse(file);
-
-    for( var cnt = 0; cnt < 12; cnt++ ) {
+    
+    for( var cnt = 0; cnt < 11; cnt++ ) {
         var time    = content.querySelector('.timeZone');
         var regular = content.querySelector('.regular');
         var gachi   = content.querySelector('.gachi');
         var league  = content.querySelector('.league');
-        console.log(content);
-        console.log(regular);
-        console.log(gachi);
-        console.log(league);
 
         // 開催時間設定
-        var start = new Date( Date.parse(schedule.result.regular[cnt].start_utc) );
-        var end   = new Date( Date.parse(schedule.result.regular[cnt].end_utc) );
+
+        console.log(cnt);
+        console.log(schedule.result.regular[cnt].end);
+        var a = schedule.result.regular[cnt].end;
+        var end   = new Date( Date.parse(schedule.result.regular[cnt].end )  );
+        var start = new Date( Date.parse(schedule.result.regular[cnt].start) );
         time.textContent = `${start.getHours()}:00 〜 ${end.getHours()}:00`;
 
         //レギュラーマッチ
-        var ruler    = regular.querySelector('.rule');
+        var ruler    = regular.querySelector('.rule_regular');
         var img1r    = regular.querySelector('.stage1');
         var img2r    = regular.querySelector('.stage2');
         var stageName1r = regular.querySelector('.stageName1');
@@ -51,7 +97,7 @@ async function makeSchedule(){
         stageName2r.textContent = `${schedule.result.regular[cnt].maps[1]}`;
 
         //ガチ
-        var ruleg    = gachi.querySelector('.rule');
+        var ruleg    = gachi.querySelector('.rule_gachi');
         var img1g    = gachi.querySelector('.stage1');
         var img2g    = gachi.querySelector('.stage2');
         var stageName1g = gachi.querySelector('.stageName1');
@@ -65,7 +111,7 @@ async function makeSchedule(){
 
 
         //リーグ
-        var rulel    = league.querySelector('.rule');
+        var rulel    = league.querySelector('.rule_league');
         var img1l    = league.querySelector('.stage1');
         var img2l    = league.querySelector('.stage2');
         var stageName1l = league.querySelector('.stageName1');
@@ -85,4 +131,9 @@ async function makeSchedule(){
     document.body.appendChild(fragment);
 }
 
-makeSchedule();
+async function doFuncs(){
+    await makeSchedule();
+    await getSchedule();
+}
+
+doFuncs();
