@@ -5,12 +5,12 @@ var fetch = require('node-fetch');
 
 async function checkCache( name, url ) {
     try {
-        fs.statSync(`cache/${name}.png`);
+        fs.statSync(`src/cache/${name}.png`);
     } catch { 
         var response = await fetch(url);
         var buff     = await response.arrayBuffer();
         var uIntBuff = new Uint8Array(buff);
-        fs.writeFileSync(`cache/${name}.png`, uIntBuff, 'binary');
+        fs.writeFileSync(`src/cache/${name}.png`, uIntBuff, 'binary');
     }
     return `cache/${name}.png`;
 }
@@ -19,8 +19,8 @@ async function getSchedule(){
 
     var needDl = true;
     try{
-        fs.statSync('cache/schedule.json');
-        var file = fs.readFileSync('cache/schedule.json', 'utf8');
+        fs.statSync('./src/cache/schedule.json');
+        var file = fs.readFileSync('./src/cache/schedule.json', 'utf8');
         var schedule = JSON.parse(file);
         var battleSchedule = Date.parse(schedule.result.regular[0].end_utc);
         var now    =  Date.parse(new Date());
@@ -50,7 +50,7 @@ async function getSchedule(){
         var body = await response.json(); 
 
         try{
-            fs.writeFileSync( "cache/schedule.json", JSON.stringify( body, null, '\t' ) );
+            fs.writeFileSync( "./src/cache/schedule.json", JSON.stringify( body, null, '\t' ) );
         }catch(e){
             console.log(e);
         }
@@ -65,7 +65,7 @@ async function makeSchedule(){
     var content  = document.getElementById('template').content;
     var fragment = document.createDocumentFragment();
 
-    var file = fs.readFileSync('cache/schedule.json', 'utf8');
+    var file = fs.readFileSync('./src/cache/schedule.json', 'utf8');
     var schedule = JSON.parse(file);
     
     for( var cnt = 0; cnt < 11; cnt++ ) {
@@ -75,10 +75,6 @@ async function makeSchedule(){
         var league  = content.querySelector('.league');
 
         // 開催時間設定
-
-        console.log(cnt);
-        console.log(schedule.result.regular[cnt].end);
-        var a = schedule.result.regular[cnt].end;
         var end   = new Date( Date.parse(schedule.result.regular[cnt].end )  );
         var start = new Date( Date.parse(schedule.result.regular[cnt].start) );
         time.textContent = `${start.getHours()}:00 〜 ${end.getHours()}:00`;
@@ -132,8 +128,8 @@ async function makeSchedule(){
 }
 
 async function doFuncs(){
-    await makeSchedule();
     await getSchedule();
+    await makeSchedule();
 }
 
 doFuncs();
