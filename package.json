@@ -5,7 +5,8 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node_modules/.bin/electron ."
+    "build": "node_modules/.bin/electron .",
+    "release": "node build-linux"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,21 @@
   "homepage": "https://github.com/yotugi-vip/SplatoonStageScheduler#readme",
   "dependencies": {
     "node-fetch": "^2.6.0"
+  },
+  "build": {
+      "appId": "com.electron.ssss",
+      "linux": {
+          "target": "deb",
+          "maintainer":"youigi",
+          "vendor":"yotugi",
+          "synopsis":"splatoon stage scheduler",
+          "description":"",
+          "category":"Game",
+          "desktop":"sss.desktop"
+      }
+  },
+  "devDependencies": {
+    "electron":"^6.0.10",
+    "electron-builder": "^21.2.0"
   }
 }
