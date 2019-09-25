@@ -4,9 +4,10 @@
   "description": "splatoon stage scheduler",
   "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node_modules/.bin/electron .",
-    "release": "node build-linux"
+    "start": "electron .",
+    "electron": "electron index.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "repository": {
     "type": "git",
