@@ -52,7 +52,7 @@ async function getSchedule(){
             method: 'GET',
             headers:{
                 'Content-Type':'application/json',
-                'User-Agent':'yotugi(email:harukipdr@gmail.com)'
+                'User-Agent':'yotugi(email:dev01.topaz+sss@gmail.com)'
             }
         }
         
