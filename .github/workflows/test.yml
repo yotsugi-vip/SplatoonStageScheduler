@@ -1,6 +1,9 @@
 name: Electron CD
 
-on: [push]
+on: 
+  push:
+    tags:
+      - v*
 
 jobs:
   build:

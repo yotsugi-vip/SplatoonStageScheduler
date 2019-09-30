@@ -23,18 +23,6 @@
     "node-fetch": "^2.6.0",
     "package.json": "^2.0.1"
   },
-  "build": {
-    "appId": "com.electron.ssss",
-    "linux": {
-      "target": "deb",
-      "maintainer": "youigi",
-      "vendor": "yotugi",
-      "synopsis": "splatoon stage scheduler",
-      "description": "",
-      "category": "Game",
-      "desktop": "sss.desktop"
-    }
-  },
   "devDependencies": {
     "electron": "^6.0.10",
     "electron-builder": "^21.2.0"
