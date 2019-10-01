@@ -1,26 +1,36 @@
 'use strict'
 var fs = require('fs');
-var fetch = require('node-fetch');
+const {app} = require("electron").remote;
+const cache_path = `${app.getPath('userData')}/img_cache`;
+const schedule_path = `${app.getPath('userData')}/schedule.json`
 
+function isExist( path ){
+    try{
+        fs.statSync(path);
+        console.log(`${path}は存在します`);
+        return true;
+    }catch{
+        console.log(`${path}は存在しません`);
+        return false;
+    }
+}
 
 async function checkCache( name, url ) {
-    try {
-        fs.statSync(`src/cache/${name}.png`);
-    } catch { 
+    
+    if(!isExist(`${cache_path}/${name}.png`)) { 
         var response = await fetch(url);
         var buff     = await response.arrayBuffer();
         var uIntBuff = new Uint8Array(buff);
-        fs.writeFileSync(`src/cache/${name}.png`, uIntBuff, 'binary');
+        fs.writeFileSync(`${cache_path}/${name}.png`, uIntBuff, 'binary');
     }
-    return `cache/${name}.png`;
+    return `${cache_path}/${name}.png`;
 }
 
 async function getSchedule(){
 
     var needDl = true;
-    try{
-        fs.statSync('./src/cache/schedule.json');
-        var file = fs.readFileSync('./src/cache/schedule.json', 'utf8');
+    if(isExist(schedule_path)) {
+        var file = fs.readFileSync(schedule_path, 'utf8');
         var schedule = JSON.parse(file);
         var battleSchedule = Date.parse(schedule.result.regular[0].end_utc);
         var now    =  Date.parse(new Date());
@@ -32,8 +42,8 @@ async function getSchedule(){
         }else{
             console.log('古いスケジュールデータ')
         }
-    }catch{
-        console.log('スケジュールデータが存在しません')
+    }else{
+        console.log('スケジュールデータが存在しません');
     }
 
     if(needDl) {
@@ -42,19 +52,14 @@ async function getSchedule(){
             method: 'GET',
             headers:{
                 'Content-Type':'application/json',
-                'User-Agent':'yotugi(email:harukipdr@gmail.com)'
+                'User-Agent':'yotugi(email:dev01.topaz+sss@gmail.com)'
             }
         }
         
+        console.log('最新のスケジュールデータを取得');
         var response = await fetch( spl, option);
         var body = await response.json(); 
-
-        try{
-            fs.writeFileSync( "./src/cache/schedule.json", JSON.stringify( body, null, '\t' ) );
-        }catch(e){
-            console.log(e);
-        }
- 
+        fs.writeFileSync( schedule_path, JSON.stringify( body, null, '\t'), 'utf8' ); 
     }else{
         console.log("最新のデータのため、更新は行いません")
     }
@@ -65,7 +70,7 @@ async function makeSchedule(){
     var content  = document.getElementById('template').content;
     var fragment = document.createDocumentFragment();
 
-    var file = fs.readFileSync('./src/cache/schedule.json', 'utf8');
+    var file = fs.readFileSync(schedule_path, 'utf8');
     var schedule = JSON.parse(file);
     
     for( var cnt = 0; cnt < 11; cnt++ ) {
@@ -128,6 +133,11 @@ async function makeSchedule(){
 }
 
 async function doFuncs(){
+    console.log(app.getAppPath());
+    console.log(app.getPath('userData'));
+    if(!isExist(cache_path)) {
+        fs.mkdirSync(cache_path);
+    }
     await getSchedule();
     await makeSchedule();
 }

@@ -18,7 +18,6 @@ function CreateWindow() {
       nodeIntegration: true // Nodeモジュール使用
     }
   });
-
   mainWindow.loadFile("./src/index.html");
   mainWindow.webContents.openDevTools();
 
