@@ -6,9 +6,9 @@
 **Version 1.0.0**
 >各プラットフォーム向けにパッケージ化<br>
 >アイコンを追加
-> + [Download for Windows](https://github.com/yotugi-vip/SplatoonStageScheduler/suites/246476322/artifacts/72706)
-> + [Download for MAC](https://github.com/yotugi-vip/SplatoonStageScheduler/suites/246476322/artifacts/72705)
-> + [Download for Linux(Ubuntu)](https://github.com/yotugi-vip/SplatoonStageScheduler/suites/246476322/artifacts/72707)
+> + [Download for Windows](https://github.com/yotugi-vip/SplatoonStageScheduler/suites/246501864/artifacts/72757)
+> + [Download for MAC](https://github.com/yotugi-vip/SplatoonStageScheduler/suites/246501864/artifacts/72755)
+> + [Download for Linux(Ubuntu)](https://github.com/yotugi-vip/SplatoonStageScheduler/suites/246501864/artifacts/72756)
 >
 >*2019/10/01*
 
