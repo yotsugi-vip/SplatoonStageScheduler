@@ -23,12 +23,13 @@
   },
   "homepage": "https://github.com/yotugi-vip/SplatoonStageScheduler#readme",
   "dependencies": {
+    "log4js": "^5.1.0",
     "node-fetch": "^2.6.0",
     "package.json": "^2.0.1"
   },
   "build": {
     "appId": "com.electron.ssss",
-    "icon" : "build",
+    "icon": "build",
     "linux": {
       "target": "deb",
       "maintainer": "youigi",
