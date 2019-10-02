@@ -23,5 +23,4 @@ OS
 modules
 * npm *6.11.3*
 * node.js *12.10.0*
-* node-fetch *2.6.0*
 * electron *6.0.9*
