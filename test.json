@@ -1,0 +1,1162 @@
+{
+    "result": {
+        "regular": [
+            {
+                "rule": "ナワバリバトル",
+                "rule_ex": {
+                    "key": "turf_war",
+                    "name": "ナワバリバトル",
+                    "statink": "nawabari"
+                },
+                "maps": [
+                    "ザトウマーケット",
+                    "タチウオパーキング"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 13,
+                        "name": "ザトウマーケット",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/d9f0f6c330aaa3b975e572637b00c4c0b6b89f7d.png",
+                        "statink": "zatou"
+                    },
+                    {
+                        "id": 8,
+                        "name": "タチウオパーキング",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/96fd8c0492331a30e60a217c94fd1d4c73a966cc.png",
+                        "statink": "tachiuo"
+                    }
+                ],
+                "start": "2020-06-27T05:00:00",
+                "start_utc": "2020-06-26T20:00:00+00:00",
+                "start_t": 1593201600,
+                "end": "2020-06-27T07:00:00",
+                "end_utc": "2020-06-26T22:00:00+00:00",
+                "end_t": 1593208800
+            },
+            {
+                "rule": "ナワバリバトル",
+                "rule_ex": {
+                    "key": "turf_war",
+                    "name": "ナワバリバトル",
+                    "statink": "nawabari"
+                },
+                "maps": [
+                    "ムツゴ楼",
+                    "Ｂバスパーク"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 22,
+                        "name": "ムツゴ楼",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/132327c819abf2bd44d0adc0f4a21aad9cc84bb2.png",
+                        "statink": "mutsugoro"
+                    },
+                    {
+                        "id": 11,
+                        "name": "Ｂバスパーク",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/758338859615898a59e93b84f7e1ca670f75e865.png",
+                        "statink": "bbass"
+                    }
+                ],
+                "start": "2020-06-27T07:00:00",
+                "start_utc": "2020-06-26T22:00:00+00:00",
+                "start_t": 1593208800,
+                "end": "2020-06-27T09:00:00",
+                "end_utc": "2020-06-27T00:00:00+00:00",
+                "end_t": 1593216000
+            },
+            {
+                "rule": "ナワバリバトル",
+                "rule_ex": {
+                    "key": "turf_war",
+                    "name": "ナワバリバトル",
+                    "statink": "nawabari"
+                },
+                "maps": [
+                    "フジツボスポーツクラブ",
+                    "ショッツル鉱山"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 1,
+                        "name": "フジツボスポーツクラブ",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/83acec875a5bb19418d7b87d5df4ba1e38ceac66.png",
+                        "statink": "fujitsubo"
+                    },
+                    {
+                        "id": 17,
+                        "name": "ショッツル鉱山",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/828e49a8414a4bbc0a5da3e61454ab148a9f4063.png",
+                        "statink": "shottsuru"
+                    }
+                ],
+                "start": "2020-06-27T09:00:00",
+                "start_utc": "2020-06-27T00:00:00+00:00",
+                "start_t": 1593216000,
+                "end": "2020-06-27T11:00:00",
+                "end_utc": "2020-06-27T02:00:00+00:00",
+                "end_t": 1593223200
+            },
+            {
+                "rule": "ナワバリバトル",
+                "rule_ex": {
+                    "key": "turf_war",
+                    "name": "ナワバリバトル",
+                    "statink": "nawabari"
+                },
+                "maps": [
+                    "コンブトラック",
+                    "海女美術大学"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 5,
+                        "name": "コンブトラック",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/fc23fedca2dfbbd8707a14606d719a4004403d13.png",
+                        "statink": "kombu"
+                    },
+                    {
+                        "id": 4,
+                        "name": "海女美術大学",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/5c030a505ee57c889d3e5268a4b10c1f1f37880a.png",
+                        "statink": "ama"
+                    }
+                ],
+                "start": "2020-06-27T11:00:00",
+                "start_utc": "2020-06-27T02:00:00+00:00",
+                "start_t": 1593223200,
+                "end": "2020-06-27T13:00:00",
+                "end_utc": "2020-06-27T04:00:00+00:00",
+                "end_t": 1593230400
+            },
+            {
+                "rule": "ナワバリバトル",
+                "rule_ex": {
+                    "key": "turf_war",
+                    "name": "ナワバリバトル",
+                    "statink": "nawabari"
+                },
+                "maps": [
+                    "モンガラキャンプ場",
+                    "モズク農園"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 16,
+                        "name": "モンガラキャンプ場",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/e4c4800be9fff23112334b193abb0fdf36e05933.png",
+                        "statink": "mongara"
+                    },
+                    {
+                        "id": 10,
+                        "name": "モズク農園",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/a12e4bf9f871677a5f3735d421317fbbf09e1a78.png",
+                        "statink": "mozuku"
+                    }
+                ],
+                "start": "2020-06-27T13:00:00",
+                "start_utc": "2020-06-27T04:00:00+00:00",
+                "start_t": 1593230400,
+                "end": "2020-06-27T15:00:00",
+                "end_utc": "2020-06-27T06:00:00+00:00",
+                "end_t": 1593237600
+            },
+            {
+                "rule": "ナワバリバトル",
+                "rule_ex": {
+                    "key": "turf_war",
+                    "name": "ナワバリバトル",
+                    "statink": "nawabari"
+                },
+                "maps": [
+                    "バッテラストリート",
+                    "マンタマリア号"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 0,
+                        "name": "バッテラストリート",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/98baf21c0366ce6e03299e2326fe6d27a7582dce.png",
+                        "statink": "battera"
+                    },
+                    {
+                        "id": 6,
+                        "name": "マンタマリア号",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/070d7ee287fdf3c5df02411950c2a1ce5b238746.png",
+                        "statink": "manta"
+                    }
+                ],
+                "start": "2020-06-27T15:00:00",
+                "start_utc": "2020-06-27T06:00:00+00:00",
+                "start_t": 1593237600,
+                "end": "2020-06-27T17:00:00",
+                "end_utc": "2020-06-27T08:00:00+00:00",
+                "end_t": 1593244800
+            },
+            {
+                "rule": "ナワバリバトル",
+                "rule_ex": {
+                    "key": "turf_war",
+                    "name": "ナワバリバトル",
+                    "statink": "nawabari"
+                },
+                "maps": [
+                    "アロワナモール",
+                    "チョウザメ造船"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 15,
+                        "name": "アロワナモール",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/dcf332bdcc80f566f3ae59c1c3a29bc6312d0ba8.png",
+                        "statink": "arowana"
+                    },
+                    {
+                        "id": 3,
+                        "name": "チョウザメ造船",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/bc794e337900afd763f8a88359f83df5679ddf12.png",
+                        "statink": "chozame"
+                    }
+                ],
+                "start": "2020-06-27T17:00:00",
+                "start_utc": "2020-06-27T08:00:00+00:00",
+                "start_t": 1593244800,
+                "end": "2020-06-27T19:00:00",
+                "end_utc": "2020-06-27T10:00:00+00:00",
+                "end_t": 1593252000
+            },
+            {
+                "rule": "ナワバリバトル",
+                "rule_ex": {
+                    "key": "turf_war",
+                    "name": "ナワバリバトル",
+                    "statink": "nawabari"
+                },
+                "maps": [
+                    "アジフライスタジアム",
+                    "ホッケふ頭"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 18,
+                        "name": "アジフライスタジアム",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/8cab733d543efc9dd561bfcc9edac52594e62522.png",
+                        "statink": "ajifry"
+                    },
+                    {
+                        "id": 7,
+                        "name": "ホッケふ頭",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/0907fc7dc325836a94d385919fe01dc13848612a.png",
+                        "statink": "hokke"
+                    }
+                ],
+                "start": "2020-06-27T19:00:00",
+                "start_utc": "2020-06-27T10:00:00+00:00",
+                "start_t": 1593252000,
+                "end": "2020-06-27T21:00:00",
+                "end_utc": "2020-06-27T12:00:00+00:00",
+                "end_t": 1593259200
+            },
+            {
+                "rule": "ナワバリバトル",
+                "rule_ex": {
+                    "key": "turf_war",
+                    "name": "ナワバリバトル",
+                    "statink": "nawabari"
+                },
+                "maps": [
+                    "ホテルニューオートロ",
+                    "デボン海洋博物館"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 19,
+                        "name": "ホテルニューオートロ",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/98a7d7a4009fae9fb7479554535425a5a604e88e.png",
+                        "statink": "otoro"
+                    },
+                    {
+                        "id": 12,
+                        "name": "デボン海洋博物館",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/23259c80272f45cea2d5c9e60bc0cedb6ce29e46.png",
+                        "statink": "devon"
+                    }
+                ],
+                "start": "2020-06-27T21:00:00",
+                "start_utc": "2020-06-27T12:00:00+00:00",
+                "start_t": 1593259200,
+                "end": "2020-06-27T23:00:00",
+                "end_utc": "2020-06-27T14:00:00+00:00",
+                "end_t": 1593266400
+            },
+            {
+                "rule": "ナワバリバトル",
+                "rule_ex": {
+                    "key": "turf_war",
+                    "name": "ナワバリバトル",
+                    "statink": "nawabari"
+                },
+                "maps": [
+                    "ガンガゼ野外音楽堂",
+                    "エンガワ河川敷"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 2,
+                        "name": "ガンガゼ野外音楽堂",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/187987856bf575c4155d021cb511034931d06d24.png",
+                        "statink": "gangaze"
+                    },
+                    {
+                        "id": 9,
+                        "name": "エンガワ河川敷",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/8c95053b3043e163cbfaaf1ec1e5f3eb770e5e07.png",
+                        "statink": "engawa"
+                    }
+                ],
+                "start": "2020-06-27T23:00:00",
+                "start_utc": "2020-06-27T14:00:00+00:00",
+                "start_t": 1593266400,
+                "end": "2020-06-28T01:00:00",
+                "end_utc": "2020-06-27T16:00:00+00:00",
+                "end_t": 1593273600
+            },
+            {
+                "rule": "ナワバリバトル",
+                "rule_ex": {
+                    "key": "turf_war",
+                    "name": "ナワバリバトル",
+                    "statink": "nawabari"
+                },
+                "maps": [
+                    "スメーシーワールド",
+                    "ザトウマーケット"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 20,
+                        "name": "スメーシーワールド",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/555c356487ac3edb0088c416e8045576c6b37fcc.png",
+                        "statink": "sumeshi"
+                    },
+                    {
+                        "id": 13,
+                        "name": "ザトウマーケット",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/d9f0f6c330aaa3b975e572637b00c4c0b6b89f7d.png",
+                        "statink": "zatou"
+                    }
+                ],
+                "start": "2020-06-28T01:00:00",
+                "start_utc": "2020-06-27T16:00:00+00:00",
+                "start_t": 1593273600,
+                "end": "2020-06-28T03:00:00",
+                "end_utc": "2020-06-27T18:00:00+00:00",
+                "end_t": 1593280800
+            },
+            {
+                "rule": "ナワバリバトル",
+                "rule_ex": {
+                    "key": "turf_war",
+                    "name": "ナワバリバトル",
+                    "statink": "nawabari"
+                },
+                "maps": [
+                    "ハコフグ倉庫",
+                    "タチウオパーキング"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 14,
+                        "name": "ハコフグ倉庫",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/65c99da154295109d6fe067005f194f681762f8c.png",
+                        "statink": "hakofugu"
+                    },
+                    {
+                        "id": 8,
+                        "name": "タチウオパーキング",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/96fd8c0492331a30e60a217c94fd1d4c73a966cc.png",
+                        "statink": "tachiuo"
+                    }
+                ],
+                "start": "2020-06-28T03:00:00",
+                "start_utc": "2020-06-27T18:00:00+00:00",
+                "start_t": 1593280800,
+                "end": "2020-06-28T05:00:00",
+                "end_utc": "2020-06-27T20:00:00+00:00",
+                "end_t": 1593288000
+            }
+        ],
+        "gachi": [
+            {
+                "rule": "ガチホコバトル",
+                "rule_ex": {
+                    "key": "rainmaker",
+                    "name": "ガチホコバトル",
+                    "statink": "hoko"
+                },
+                "maps": [
+                    "アンチョビットゲームズ",
+                    "ホッケふ頭"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 21,
+                        "name": "アンチョビットゲームズ",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/1430e5ac7ae9396a126078eeab824a186b490b5a.png",
+                        "statink": "anchovy"
+                    },
+                    {
+                        "id": 7,
+                        "name": "ホッケふ頭",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/0907fc7dc325836a94d385919fe01dc13848612a.png",
+                        "statink": "hokke"
+                    }
+                ],
+                "start": "2020-06-27T05:00:00",
+                "start_utc": "2020-06-26T20:00:00+00:00",
+                "start_t": 1593201600,
+                "end": "2020-06-27T07:00:00",
+                "end_utc": "2020-06-26T22:00:00+00:00",
+                "end_t": 1593208800
+            },
+            {
+                "rule": "ガチアサリ",
+                "rule_ex": {
+                    "key": "clam_blitz",
+                    "name": "ガチアサリ",
+                    "statink": "asari"
+                },
+                "maps": [
+                    "海女美術大学",
+                    "フジツボスポーツクラブ"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 4,
+                        "name": "海女美術大学",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/5c030a505ee57c889d3e5268a4b10c1f1f37880a.png",
+                        "statink": "ama"
+                    },
+                    {
+                        "id": 1,
+                        "name": "フジツボスポーツクラブ",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/83acec875a5bb19418d7b87d5df4ba1e38ceac66.png",
+                        "statink": "fujitsubo"
+                    }
+                ],
+                "start": "2020-06-27T07:00:00",
+                "start_utc": "2020-06-26T22:00:00+00:00",
+                "start_t": 1593208800,
+                "end": "2020-06-27T09:00:00",
+                "end_utc": "2020-06-27T00:00:00+00:00",
+                "end_t": 1593216000
+            },
+            {
+                "rule": "ガチエリア",
+                "rule_ex": {
+                    "key": "splat_zones",
+                    "name": "ガチエリア",
+                    "statink": "area"
+                },
+                "maps": [
+                    "エンガワ河川敷",
+                    "モズク農園"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 9,
+                        "name": "エンガワ河川敷",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/8c95053b3043e163cbfaaf1ec1e5f3eb770e5e07.png",
+                        "statink": "engawa"
+                    },
+                    {
+                        "id": 10,
+                        "name": "モズク農園",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/a12e4bf9f871677a5f3735d421317fbbf09e1a78.png",
+                        "statink": "mozuku"
+                    }
+                ],
+                "start": "2020-06-27T09:00:00",
+                "start_utc": "2020-06-27T00:00:00+00:00",
+                "start_t": 1593216000,
+                "end": "2020-06-27T11:00:00",
+                "end_utc": "2020-06-27T02:00:00+00:00",
+                "end_t": 1593223200
+            },
+            {
+                "rule": "ガチホコバトル",
+                "rule_ex": {
+                    "key": "rainmaker",
+                    "name": "ガチホコバトル",
+                    "statink": "hoko"
+                },
+                "maps": [
+                    "タチウオパーキング",
+                    "スメーシーワールド"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 8,
+                        "name": "タチウオパーキング",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/96fd8c0492331a30e60a217c94fd1d4c73a966cc.png",
+                        "statink": "tachiuo"
+                    },
+                    {
+                        "id": 20,
+                        "name": "スメーシーワールド",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/555c356487ac3edb0088c416e8045576c6b37fcc.png",
+                        "statink": "sumeshi"
+                    }
+                ],
+                "start": "2020-06-27T11:00:00",
+                "start_utc": "2020-06-27T02:00:00+00:00",
+                "start_t": 1593223200,
+                "end": "2020-06-27T13:00:00",
+                "end_utc": "2020-06-27T04:00:00+00:00",
+                "end_t": 1593230400
+            },
+            {
+                "rule": "ガチヤグラ",
+                "rule_ex": {
+                    "key": "tower_control",
+                    "name": "ガチヤグラ",
+                    "statink": "yagura"
+                },
+                "maps": [
+                    "アジフライスタジアム",
+                    "Ｂバスパーク"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 18,
+                        "name": "アジフライスタジアム",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/8cab733d543efc9dd561bfcc9edac52594e62522.png",
+                        "statink": "ajifry"
+                    },
+                    {
+                        "id": 11,
+                        "name": "Ｂバスパーク",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/758338859615898a59e93b84f7e1ca670f75e865.png",
+                        "statink": "bbass"
+                    }
+                ],
+                "start": "2020-06-27T13:00:00",
+                "start_utc": "2020-06-27T04:00:00+00:00",
+                "start_t": 1593230400,
+                "end": "2020-06-27T15:00:00",
+                "end_utc": "2020-06-27T06:00:00+00:00",
+                "end_t": 1593237600
+            },
+            {
+                "rule": "ガチアサリ",
+                "rule_ex": {
+                    "key": "clam_blitz",
+                    "name": "ガチアサリ",
+                    "statink": "asari"
+                },
+                "maps": [
+                    "アロワナモール",
+                    "ムツゴ楼"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 15,
+                        "name": "アロワナモール",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/dcf332bdcc80f566f3ae59c1c3a29bc6312d0ba8.png",
+                        "statink": "arowana"
+                    },
+                    {
+                        "id": 22,
+                        "name": "ムツゴ楼",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/132327c819abf2bd44d0adc0f4a21aad9cc84bb2.png",
+                        "statink": "mutsugoro"
+                    }
+                ],
+                "start": "2020-06-27T15:00:00",
+                "start_utc": "2020-06-27T06:00:00+00:00",
+                "start_t": 1593237600,
+                "end": "2020-06-27T17:00:00",
+                "end_utc": "2020-06-27T08:00:00+00:00",
+                "end_t": 1593244800
+            },
+            {
+                "rule": "ガチホコバトル",
+                "rule_ex": {
+                    "key": "rainmaker",
+                    "name": "ガチホコバトル",
+                    "statink": "hoko"
+                },
+                "maps": [
+                    "ホテルニューオートロ",
+                    "ザトウマーケット"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 19,
+                        "name": "ホテルニューオートロ",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/98a7d7a4009fae9fb7479554535425a5a604e88e.png",
+                        "statink": "otoro"
+                    },
+                    {
+                        "id": 13,
+                        "name": "ザトウマーケット",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/d9f0f6c330aaa3b975e572637b00c4c0b6b89f7d.png",
+                        "statink": "zatou"
+                    }
+                ],
+                "start": "2020-06-27T17:00:00",
+                "start_utc": "2020-06-27T08:00:00+00:00",
+                "start_t": 1593244800,
+                "end": "2020-06-27T19:00:00",
+                "end_utc": "2020-06-27T10:00:00+00:00",
+                "end_t": 1593252000
+            },
+            {
+                "rule": "ガチエリア",
+                "rule_ex": {
+                    "key": "splat_zones",
+                    "name": "ガチエリア",
+                    "statink": "area"
+                },
+                "maps": [
+                    "マンタマリア号",
+                    "デボン海洋博物館"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 6,
+                        "name": "マンタマリア号",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/070d7ee287fdf3c5df02411950c2a1ce5b238746.png",
+                        "statink": "manta"
+                    },
+                    {
+                        "id": 12,
+                        "name": "デボン海洋博物館",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/23259c80272f45cea2d5c9e60bc0cedb6ce29e46.png",
+                        "statink": "devon"
+                    }
+                ],
+                "start": "2020-06-27T19:00:00",
+                "start_utc": "2020-06-27T10:00:00+00:00",
+                "start_t": 1593252000,
+                "end": "2020-06-27T21:00:00",
+                "end_utc": "2020-06-27T12:00:00+00:00",
+                "end_t": 1593259200
+            },
+            {
+                "rule": "ガチヤグラ",
+                "rule_ex": {
+                    "key": "tower_control",
+                    "name": "ガチヤグラ",
+                    "statink": "yagura"
+                },
+                "maps": [
+                    "チョウザメ造船",
+                    "ガンガゼ野外音楽堂"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 3,
+                        "name": "チョウザメ造船",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/bc794e337900afd763f8a88359f83df5679ddf12.png",
+                        "statink": "chozame"
+                    },
+                    {
+                        "id": 2,
+                        "name": "ガンガゼ野外音楽堂",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/187987856bf575c4155d021cb511034931d06d24.png",
+                        "statink": "gangaze"
+                    }
+                ],
+                "start": "2020-06-27T21:00:00",
+                "start_utc": "2020-06-27T12:00:00+00:00",
+                "start_t": 1593259200,
+                "end": "2020-06-27T23:00:00",
+                "end_utc": "2020-06-27T14:00:00+00:00",
+                "end_t": 1593266400
+            },
+            {
+                "rule": "ガチアサリ",
+                "rule_ex": {
+                    "key": "clam_blitz",
+                    "name": "ガチアサリ",
+                    "statink": "asari"
+                },
+                "maps": [
+                    "ホッケふ頭",
+                    "アジフライスタジアム"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 7,
+                        "name": "ホッケふ頭",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/0907fc7dc325836a94d385919fe01dc13848612a.png",
+                        "statink": "hokke"
+                    },
+                    {
+                        "id": 18,
+                        "name": "アジフライスタジアム",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/8cab733d543efc9dd561bfcc9edac52594e62522.png",
+                        "statink": "ajifry"
+                    }
+                ],
+                "start": "2020-06-27T23:00:00",
+                "start_utc": "2020-06-27T14:00:00+00:00",
+                "start_t": 1593266400,
+                "end": "2020-06-28T01:00:00",
+                "end_utc": "2020-06-27T16:00:00+00:00",
+                "end_t": 1593273600
+            },
+            {
+                "rule": "ガチホコバトル",
+                "rule_ex": {
+                    "key": "rainmaker",
+                    "name": "ガチホコバトル",
+                    "statink": "hoko"
+                },
+                "maps": [
+                    "アンチョビットゲームズ",
+                    "モズク農園"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 21,
+                        "name": "アンチョビットゲームズ",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/1430e5ac7ae9396a126078eeab824a186b490b5a.png",
+                        "statink": "anchovy"
+                    },
+                    {
+                        "id": 10,
+                        "name": "モズク農園",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/a12e4bf9f871677a5f3735d421317fbbf09e1a78.png",
+                        "statink": "mozuku"
+                    }
+                ],
+                "start": "2020-06-28T01:00:00",
+                "start_utc": "2020-06-27T16:00:00+00:00",
+                "start_t": 1593273600,
+                "end": "2020-06-28T03:00:00",
+                "end_utc": "2020-06-27T18:00:00+00:00",
+                "end_t": 1593280800
+            },
+            {
+                "rule": "ガチエリア",
+                "rule_ex": {
+                    "key": "splat_zones",
+                    "name": "ガチエリア",
+                    "statink": "area"
+                },
+                "maps": [
+                    "バッテラストリート",
+                    "海女美術大学"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 0,
+                        "name": "バッテラストリート",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/98baf21c0366ce6e03299e2326fe6d27a7582dce.png",
+                        "statink": "battera"
+                    },
+                    {
+                        "id": 4,
+                        "name": "海女美術大学",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/5c030a505ee57c889d3e5268a4b10c1f1f37880a.png",
+                        "statink": "ama"
+                    }
+                ],
+                "start": "2020-06-28T03:00:00",
+                "start_utc": "2020-06-27T18:00:00+00:00",
+                "start_t": 1593280800,
+                "end": "2020-06-28T05:00:00",
+                "end_utc": "2020-06-27T20:00:00+00:00",
+                "end_t": 1593288000
+            }
+        ],
+        "league": [
+            {
+                "rule": "ガチヤグラ",
+                "rule_ex": {
+                    "key": "tower_control",
+                    "name": "ガチヤグラ",
+                    "statink": "yagura"
+                },
+                "maps": [
+                    "エンガワ河川敷",
+                    "モンガラキャンプ場"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 9,
+                        "name": "エンガワ河川敷",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/8c95053b3043e163cbfaaf1ec1e5f3eb770e5e07.png",
+                        "statink": "engawa"
+                    },
+                    {
+                        "id": 16,
+                        "name": "モンガラキャンプ場",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/e4c4800be9fff23112334b193abb0fdf36e05933.png",
+                        "statink": "mongara"
+                    }
+                ],
+                "start": "2020-06-27T05:00:00",
+                "start_utc": "2020-06-26T20:00:00+00:00",
+                "start_t": 1593201600,
+                "end": "2020-06-27T07:00:00",
+                "end_utc": "2020-06-26T22:00:00+00:00",
+                "end_t": 1593208800
+            },
+            {
+                "rule": "ガチエリア",
+                "rule_ex": {
+                    "key": "splat_zones",
+                    "name": "ガチエリア",
+                    "statink": "area"
+                },
+                "maps": [
+                    "ショッツル鉱山",
+                    "アジフライスタジアム"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 17,
+                        "name": "ショッツル鉱山",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/828e49a8414a4bbc0a5da3e61454ab148a9f4063.png",
+                        "statink": "shottsuru"
+                    },
+                    {
+                        "id": 18,
+                        "name": "アジフライスタジアム",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/8cab733d543efc9dd561bfcc9edac52594e62522.png",
+                        "statink": "ajifry"
+                    }
+                ],
+                "start": "2020-06-27T07:00:00",
+                "start_utc": "2020-06-26T22:00:00+00:00",
+                "start_t": 1593208800,
+                "end": "2020-06-27T09:00:00",
+                "end_utc": "2020-06-27T00:00:00+00:00",
+                "end_t": 1593216000
+            },
+            {
+                "rule": "ガチアサリ",
+                "rule_ex": {
+                    "key": "clam_blitz",
+                    "name": "ガチアサリ",
+                    "statink": "asari"
+                },
+                "maps": [
+                    "コンブトラック",
+                    "海女美術大学"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 5,
+                        "name": "コンブトラック",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/fc23fedca2dfbbd8707a14606d719a4004403d13.png",
+                        "statink": "kombu"
+                    },
+                    {
+                        "id": 4,
+                        "name": "海女美術大学",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/5c030a505ee57c889d3e5268a4b10c1f1f37880a.png",
+                        "statink": "ama"
+                    }
+                ],
+                "start": "2020-06-27T09:00:00",
+                "start_utc": "2020-06-27T00:00:00+00:00",
+                "start_t": 1593216000,
+                "end": "2020-06-27T11:00:00",
+                "end_utc": "2020-06-27T02:00:00+00:00",
+                "end_t": 1593223200
+            },
+            {
+                "rule": "ガチヤグラ",
+                "rule_ex": {
+                    "key": "tower_control",
+                    "name": "ガチヤグラ",
+                    "statink": "yagura"
+                },
+                "maps": [
+                    "ザトウマーケット",
+                    "モズク農園"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 13,
+                        "name": "ザトウマーケット",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/d9f0f6c330aaa3b975e572637b00c4c0b6b89f7d.png",
+                        "statink": "zatou"
+                    },
+                    {
+                        "id": 10,
+                        "name": "モズク農園",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/a12e4bf9f871677a5f3735d421317fbbf09e1a78.png",
+                        "statink": "mozuku"
+                    }
+                ],
+                "start": "2020-06-27T11:00:00",
+                "start_utc": "2020-06-27T02:00:00+00:00",
+                "start_t": 1593223200,
+                "end": "2020-06-27T13:00:00",
+                "end_utc": "2020-06-27T04:00:00+00:00",
+                "end_t": 1593230400
+            },
+            {
+                "rule": "ガチホコバトル",
+                "rule_ex": {
+                    "key": "rainmaker",
+                    "name": "ガチホコバトル",
+                    "statink": "hoko"
+                },
+                "maps": [
+                    "ムツゴ楼",
+                    "ホッケふ頭"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 22,
+                        "name": "ムツゴ楼",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/132327c819abf2bd44d0adc0f4a21aad9cc84bb2.png",
+                        "statink": "mutsugoro"
+                    },
+                    {
+                        "id": 7,
+                        "name": "ホッケふ頭",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/0907fc7dc325836a94d385919fe01dc13848612a.png",
+                        "statink": "hokke"
+                    }
+                ],
+                "start": "2020-06-27T13:00:00",
+                "start_utc": "2020-06-27T04:00:00+00:00",
+                "start_t": 1593230400,
+                "end": "2020-06-27T15:00:00",
+                "end_utc": "2020-06-27T06:00:00+00:00",
+                "end_t": 1593237600
+            },
+            {
+                "rule": "ガチエリア",
+                "rule_ex": {
+                    "key": "splat_zones",
+                    "name": "ガチエリア",
+                    "statink": "area"
+                },
+                "maps": [
+                    "スメーシーワールド",
+                    "チョウザメ造船"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 20,
+                        "name": "スメーシーワールド",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/555c356487ac3edb0088c416e8045576c6b37fcc.png",
+                        "statink": "sumeshi"
+                    },
+                    {
+                        "id": 3,
+                        "name": "チョウザメ造船",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/bc794e337900afd763f8a88359f83df5679ddf12.png",
+                        "statink": "chozame"
+                    }
+                ],
+                "start": "2020-06-27T15:00:00",
+                "start_utc": "2020-06-27T06:00:00+00:00",
+                "start_t": 1593237600,
+                "end": "2020-06-27T17:00:00",
+                "end_utc": "2020-06-27T08:00:00+00:00",
+                "end_t": 1593244800
+            },
+            {
+                "rule": "ガチアサリ",
+                "rule_ex": {
+                    "key": "clam_blitz",
+                    "name": "ガチアサリ",
+                    "statink": "asari"
+                },
+                "maps": [
+                    "ハコフグ倉庫",
+                    "Ｂバスパーク"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 14,
+                        "name": "ハコフグ倉庫",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/65c99da154295109d6fe067005f194f681762f8c.png",
+                        "statink": "hakofugu"
+                    },
+                    {
+                        "id": 11,
+                        "name": "Ｂバスパーク",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/758338859615898a59e93b84f7e1ca670f75e865.png",
+                        "statink": "bbass"
+                    }
+                ],
+                "start": "2020-06-27T17:00:00",
+                "start_utc": "2020-06-27T08:00:00+00:00",
+                "start_t": 1593244800,
+                "end": "2020-06-27T19:00:00",
+                "end_utc": "2020-06-27T10:00:00+00:00",
+                "end_t": 1593252000
+            },
+            {
+                "rule": "ガチヤグラ",
+                "rule_ex": {
+                    "key": "tower_control",
+                    "name": "ガチヤグラ",
+                    "statink": "yagura"
+                },
+                "maps": [
+                    "ガンガゼ野外音楽堂",
+                    "ホテルニューオートロ"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 2,
+                        "name": "ガンガゼ野外音楽堂",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/187987856bf575c4155d021cb511034931d06d24.png",
+                        "statink": "gangaze"
+                    },
+                    {
+                        "id": 19,
+                        "name": "ホテルニューオートロ",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/98a7d7a4009fae9fb7479554535425a5a604e88e.png",
+                        "statink": "otoro"
+                    }
+                ],
+                "start": "2020-06-27T19:00:00",
+                "start_utc": "2020-06-27T10:00:00+00:00",
+                "start_t": 1593252000,
+                "end": "2020-06-27T21:00:00",
+                "end_utc": "2020-06-27T12:00:00+00:00",
+                "end_t": 1593259200
+            },
+            {
+                "rule": "ガチエリア",
+                "rule_ex": {
+                    "key": "splat_zones",
+                    "name": "ガチエリア",
+                    "statink": "area"
+                },
+                "maps": [
+                    "海女美術大学",
+                    "エンガワ河川敷"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 4,
+                        "name": "海女美術大学",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/5c030a505ee57c889d3e5268a4b10c1f1f37880a.png",
+                        "statink": "ama"
+                    },
+                    {
+                        "id": 9,
+                        "name": "エンガワ河川敷",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/8c95053b3043e163cbfaaf1ec1e5f3eb770e5e07.png",
+                        "statink": "engawa"
+                    }
+                ],
+                "start": "2020-06-27T21:00:00",
+                "start_utc": "2020-06-27T12:00:00+00:00",
+                "start_t": 1593259200,
+                "end": "2020-06-27T23:00:00",
+                "end_utc": "2020-06-27T14:00:00+00:00",
+                "end_t": 1593266400
+            },
+            {
+                "rule": "ガチホコバトル",
+                "rule_ex": {
+                    "key": "rainmaker",
+                    "name": "ガチホコバトル",
+                    "statink": "hoko"
+                },
+                "maps": [
+                    "フジツボスポーツクラブ",
+                    "デボン海洋博物館"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 1,
+                        "name": "フジツボスポーツクラブ",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/83acec875a5bb19418d7b87d5df4ba1e38ceac66.png",
+                        "statink": "fujitsubo"
+                    },
+                    {
+                        "id": 12,
+                        "name": "デボン海洋博物館",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/23259c80272f45cea2d5c9e60bc0cedb6ce29e46.png",
+                        "statink": "devon"
+                    }
+                ],
+                "start": "2020-06-27T23:00:00",
+                "start_utc": "2020-06-27T14:00:00+00:00",
+                "start_t": 1593266400,
+                "end": "2020-06-28T01:00:00",
+                "end_utc": "2020-06-27T16:00:00+00:00",
+                "end_t": 1593273600
+            },
+            {
+                "rule": "ガチヤグラ",
+                "rule_ex": {
+                    "key": "tower_control",
+                    "name": "ガチヤグラ",
+                    "statink": "yagura"
+                },
+                "maps": [
+                    "マンタマリア号",
+                    "ショッツル鉱山"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 6,
+                        "name": "マンタマリア号",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/070d7ee287fdf3c5df02411950c2a1ce5b238746.png",
+                        "statink": "manta"
+                    },
+                    {
+                        "id": 17,
+                        "name": "ショッツル鉱山",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/828e49a8414a4bbc0a5da3e61454ab148a9f4063.png",
+                        "statink": "shottsuru"
+                    }
+                ],
+                "start": "2020-06-28T01:00:00",
+                "start_utc": "2020-06-27T16:00:00+00:00",
+                "start_t": 1593273600,
+                "end": "2020-06-28T03:00:00",
+                "end_utc": "2020-06-27T18:00:00+00:00",
+                "end_t": 1593280800
+            },
+            {
+                "rule": "ガチアサリ",
+                "rule_ex": {
+                    "key": "clam_blitz",
+                    "name": "ガチアサリ",
+                    "statink": "asari"
+                },
+                "maps": [
+                    "モズク農園",
+                    "スメーシーワールド"
+                ],
+                "maps_ex": [
+                    {
+                        "id": 10,
+                        "name": "モズク農園",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/a12e4bf9f871677a5f3735d421317fbbf09e1a78.png",
+                        "statink": "mozuku"
+                    },
+                    {
+                        "id": 20,
+                        "name": "スメーシーワールド",
+                        "image": "https://app.splatoon2.nintendo.net/images/stage/555c356487ac3edb0088c416e8045576c6b37fcc.png",
+                        "statink": "sumeshi"
+                    }
+                ],
+                "start": "2020-06-28T03:00:00",
+                "start_utc": "2020-06-27T18:00:00+00:00",
+                "start_t": 1593280800,
+                "end": "2020-06-28T05:00:00",
+                "end_utc": "2020-06-27T20:00:00+00:00",
+                "end_t": 1593288000
+            }
+        ]
+    }
+}

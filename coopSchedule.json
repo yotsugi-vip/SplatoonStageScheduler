@@ -1,0 +1,102 @@
+{
+    "result": [
+        {
+            "start": "2020-07-07T21:00:00",
+            "start_utc": "2020-07-07T12:00:00+00:00",
+            "start_t": 1594123200,
+            "end": "2020-07-09T09:00:00",
+            "end_utc": "2020-07-09T00:00:00+00:00",
+            "end_t": 1594252800,
+            "stage": {
+                "image": "https://app.splatoon2.nintendo.net/images/coop_stage/50064ec6e97aac91e70df5fc2cfecf61ad8615fd.png",
+                "name": "朽ちた箱舟 ポラリス"
+            },
+            "weapons": [
+                {
+                    "id": 60,
+                    "image": "https://app.splatoon2.nintendo.net/images/weapon/1f2b1db5917ef7a4e62f0e15b8805275e33f2179.png",
+                    "name": "N-ZAP85"
+                },
+                {
+                    "id": 6000,
+                    "image": "https://app.splatoon2.nintendo.net/images/weapon/f1fa6db2e21f32cd1c2cd093ec24f1a450d4650c.png",
+                    "name": "パラシェルター"
+                },
+                {
+                    "id": 5010,
+                    "image": "https://app.splatoon2.nintendo.net/images/weapon/bb5caf24e43f8c7ceb126670bf24fd3aa9a3c3fc.png",
+                    "name": "スプラマニューバー"
+                },
+                {
+                    "id": 2010,
+                    "image": "https://app.splatoon2.nintendo.net/images/weapon/1ed94885bef2b0e498ed4dd76bea9064c85cfc94.png",
+                    "name": "スプラチャージャー"
+                }
+            ]
+        },
+        {
+            "start": "2020-07-09T15:00:00",
+            "start_utc": "2020-07-09T06:00:00+00:00",
+            "start_t": 1594274400,
+            "end": "2020-07-11T03:00:00",
+            "end_utc": "2020-07-10T18:00:00+00:00",
+            "end_t": 1594404000,
+            "stage": {
+                "image": "https://app.splatoon2.nintendo.net/images/coop_stage/e9f7c7b35e6d46778cd3cbc0d89bd7e1bc3be493.png",
+                "name": "トキシラズいぶし工房"
+            },
+            "weapons": [
+                {
+                    "id": 1030,
+                    "image": "https://app.splatoon2.nintendo.net/images/weapon/e32ed68bb18628c5ede5816a2fbc2b8fcdd04124.png",
+                    "name": "ヴァリアブルローラー"
+                },
+                {
+                    "id": 4030,
+                    "image": "https://app.splatoon2.nintendo.net/images/weapon/f208b6222acb5014ab96285e9b9a3e98039c884b.png",
+                    "name": "クーゲルシュライバー"
+                },
+                {
+                    "id": 230,
+                    "image": "https://app.splatoon2.nintendo.net/images/weapon/2b684d81508ca5286060767e29dd81ca38303f43.png",
+                    "name": "クラッシュブラスター"
+                },
+                {
+                    "id": 2060,
+                    "image": "https://app.splatoon2.nintendo.net/images/weapon/26d523e6eee3d57dc6c5f531dfc1747ffd46b8b8.png",
+                    "name": "ソイチューバー"
+                }
+            ]
+        },
+        {
+            "start": "2020-07-11T09:00:00",
+            "start_utc": "2020-07-11T00:00:00+00:00",
+            "start_t": 1594425600,
+            "end": "2020-07-13T03:00:00",
+            "end_utc": "2020-07-12T18:00:00+00:00",
+            "end_t": 1594576800,
+            "stage": null,
+            "weapons": null
+        },
+        {
+            "start": "2020-07-13T09:00:00",
+            "start_utc": "2020-07-13T00:00:00+00:00",
+            "start_t": 1594598400,
+            "end": "2020-07-14T21:00:00",
+            "end_utc": "2020-07-14T12:00:00+00:00",
+            "end_t": 1594728000,
+            "stage": null,
+            "weapons": null
+        },
+        {
+            "start": "2020-07-15T03:00:00",
+            "start_utc": "2020-07-14T18:00:00+00:00",
+            "start_t": 1594749600,
+            "end": "2020-07-16T15:00:00",
+            "end_utc": "2020-07-16T06:00:00+00:00",
+            "end_t": 1594879200,
+            "stage": null,
+            "weapons": null
+        }
+    ]
+}
