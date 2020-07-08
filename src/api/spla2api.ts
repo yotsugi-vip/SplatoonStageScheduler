@@ -8,31 +8,40 @@ const paramCoop: string = "coop/schedule";
 const userAgent: string = "splatoonStageScheduler(twitter @ytg_vip)";
 
 class spla2api {
+    filepath = String();
 
-    constructor() { }
+    constructor(tmpPath: string) {
+        this.filepath = tmpPath;
+    }
 
-    private async getSchedule(filepath: string, isCoop: boolean) {
+    private async getSchedule(isCoop: boolean) {
         let url = urljoin(endpoint, isCoop ? paramCoop : paramMatch);
         let res = await fetch(url, { method: 'GET', headers: { 'User-Agent': userAgent } });
         let body = await res.json();
-        fs.writeFileSync(filepath, JSON.stringify(body, null, "\t"), "utf8");
+        fs.writeFileSync(this.filepath, JSON.stringify(body, null, "\t"), "utf8");
     }
 
-    // APIに過剰アクセスしないようスケジュールに更新がないかチェックする
-    private checkSavedSchedule(filepath: string, isCoop: boolean): boolean {
-        if (!fs.existsSync(filepath)) return false;
-        let file = fs.readFileSync(filepath, "utf8");
+    private checkSavedSchedule(isCoop: boolean): boolean {
+        if (!fs.existsSync(this.filepath)) return false;
+        let file = fs.readFileSync(this.filepath, "utf8");
         let schedule = JSON.parse(file);
         let battleSchedule = Date.parse(isCoop ? schedule.result[0].end_utc : schedule.result.regular[0].end_utc);
         if (battleSchedule > Date.now()) return false;
         return true;
     }
 
-    Schedule(isCoop: boolean, filepath: string) {
-        if (!this.checkSavedSchedule(filepath, isCoop)) this.getSchedule(filepath, isCoop);
-        var file = fs.readFileSync(filepath, "utf8");
-        var schedule = JSON.parse(file);
-        // match と coop で分けたほうがいいかも
+    getMatchSchedule(): spl2_match {
+        if (!this.checkSavedSchedule(false)) this.getSchedule(false);
+        let file = fs.readFileSync(this.filepath, "utf8");
+        let schedule: spl2_match = JSON.parse(file);
+        return schedule;
+    }
+
+    getCoopSchedule(): spl2_coop {
+        if (!this.checkSavedSchedule(true)) this.getSchedule(true);
+        let file = fs.readFileSync(this.filepath, "utf8");
+        let schedule: spl2_coop = JSON.parse(file);
+        return schedule;
     }
 }
 

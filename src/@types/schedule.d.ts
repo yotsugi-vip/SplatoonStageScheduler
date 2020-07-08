@@ -20,11 +20,19 @@ interface splaTime {
     end_t: number;
 }
 
-interface spl2_match extends splaTime {
+interface base_match extends splaTime {
     rule: string;
     rule_ex: rule_ex;
     maps: Array<string>;
     maps_ex: Array<maps_ex>;
+}
+
+interface spl2_match {
+    result: {
+        regular: Array<base_match>;
+        gachi: Array<base_match>;
+        league: Array<base_match>;
+    }
 }
 
 interface coop_stage {
@@ -38,7 +46,11 @@ interface coop_weapon {
     name: string;
 }
 
-interface spl2_coop extends splaTime {
+interface base_coop extends splaTime {
     stage: coop_stage;
     weapons: Array<coop_weapon>
+}
+
+interface spl2_coop extends splaTime {
+    result: Array<base_coop>;
 }
