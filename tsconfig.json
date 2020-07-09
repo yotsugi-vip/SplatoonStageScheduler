@@ -11,8 +11,7 @@
       "checkJs": true,  // js簡易型チェック
       "sourceMap": true,
       "inlineSources": true,
-      "outDir": "./dist/",
-      "noImplicitAny": true,
+      "noImplicitAny": false,
       "jsx": "react",
       "allowSyntheticDefaultImports": true,
       "moduleResolution": "node",

@@ -1,21 +1,24 @@
 {
   "name": "sss_ts-react",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "webpack",
-    "build-prod": "webpack --mode=production"
-  },
+  "description": "splatoon2 stage scheduler",
+  "repository": "https://github.com/yotsugi-vip/SplatoonStageScheduler",
   "author": "yotsugi",
   "license": "MIT",
+  "main": "build/main.js",
+  "scripts": {
+    "build": "webpack",
+    "dist":"electron-builder"
+  },
   "devDependencies": {
     "@types/node": "^14.0.14",
     "@types/node-fetch": "^2.5.7",
     "@types/react": "^16.9.41",
     "@types/react-dom": "^16.9.8",
     "@types/url-join": "^4.0.0",
+    "@types/webpack": "^4.41.21",
+    "electron": "^9.1.0",
+    "electron-builder": "^22.7.0",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5",
     "webpack": "^4.43.0",
@@ -27,5 +30,9 @@
     "node-fetch": "^2.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
-  }
+  },
+  "build": {
+		"productName": "SplatoonStageScheduler",
+		"appId": "dev.vip.splatoon.stage.scheduler"
+	}
 }

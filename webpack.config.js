@@ -1,29 +1,58 @@
 const path = require("path");
 
-module.exports = {
+/** @type import('webpack').Configuration */
+const main = {
+    target: "electron-main",
     mode: "development",
-    entry: [path.resolve(__dirname, "./src/index.tsx")],
-    output:{
-        filename:"bundle.js",
-        path:path.resolve(__dirname,"dist")
+    entry: "./src/main.ts",
+    output: {
+        filename: "main.js",
+        path: path.resolve(__dirname, "build")
     },
 
-    module:{
-        rules:[
+    module: {
+        rules: [
             {
-                test:/\.(js|ts|tsx)?$/,
-                use:"ts-loader",
-                exclude:/node_modules/
+                test: /\.ts?$/,
+                use: "ts-loader",
+                exclude: /node_modules/
             }
         ]
     },
 
-    resolve:{
-        extensions:[".ts",".tsx",".js",".json"]
+    resolve: {
+        extensions: [".ts", ".tsx", ".js", ".json"]
     },
 
-    devtool:"source-map",
-    devServer:{
-        contentBase:"./dist"
-    }
-};
+    devtool: "source-map",
+
+}
+
+/** @type import('webpack').Configuration */
+const rendor = {
+    target: "electron-renderer",
+    mode: "development",
+    entry: "./src/index.tsx",
+    output: {
+        filename: "bundle.js",
+        path: path.resolve(__dirname, "build")
+    },
+
+    module: {
+        rules: [
+            {
+                test: /\.(ts|tsx)?$/,
+                use: "ts-loader",
+                exclude: /node_modules/
+            }
+        ]
+    },
+
+    resolve: {
+        extensions: [".ts", ".tsx", ".js", ".json"]
+    },
+
+    devtool: "source-map",
+}
+
+module.exports = [main, rendor];
