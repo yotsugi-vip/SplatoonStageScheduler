@@ -29,7 +29,7 @@ const main = {
 }
 
 /** @type import('webpack').Configuration */
-const rendor = {
+const render = {
     target: "electron-renderer",
     mode: "development",
     entry: "./src/index.tsx",
@@ -55,4 +55,4 @@ const rendor = {
     devtool: "source-map",
 }
 
-module.exports = [main, rendor];
+module.exports = [main, render];

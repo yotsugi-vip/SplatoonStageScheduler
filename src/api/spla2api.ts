@@ -43,6 +43,20 @@ class spla2api {
         let schedule: spl2_coop = JSON.parse(file);
         return schedule;
     }
+
+    static getMatchSchedule_debug(): spl2_match {
+        let path: string = "./tmp_json/matchSchedule.json";
+        let file = fs.readFileSync(path, "utf8");
+        let schedule: spl2_match = JSON.parse(file);
+        return schedule;
+    }
+
+    getCoopSchedule_debug(): spl2_match {
+        let path: string = "./tmp_json/coopSchedule.json";
+        let file = fs.readFileSync(path, "utf8");
+        let schedule: spl2_match = JSON.parse(file);
+        return schedule;
+    }
 }
 
 export default spla2api;
