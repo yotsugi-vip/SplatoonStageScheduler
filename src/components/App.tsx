@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import Schedule from './Schedule';
-import TimeZone from './Schedule';
-import Spl2Api from '../api/spla2api'
 import spla2api from '../api/spla2api';
 import MatchList from './Schedule';
+
+import app from 'electron';
+const cache_path = app.remote.app.getPath("userData");
+
 
 interface IState_APP { api: spla2api }
 class App extends Component {
   state: IState_APP;
   constructor(props) {
     super(props);
-    this.state = { api: new spla2api("") }
+    this.state = { api: new spla2api(cache_path) }
   }
 
   render() {
