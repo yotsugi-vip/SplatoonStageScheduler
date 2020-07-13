@@ -3,28 +3,21 @@ import Schedule from './Schedule';
 import TimeZone from './Schedule';
 import Spl2Api from '../api/spla2api'
 import spla2api from '../api/spla2api';
+import MatchList from './Schedule';
 
-interface IState { api: spla2api }
-
+interface IState_APP { api: spla2api }
 class App extends Component {
-  state: IState;
-
-  constructor(props){
+  state: IState_APP;
+  constructor(props) {
     super(props);
-    this.state = { api : new spla2api("") }
+    this.state = { api: new spla2api("") }
   }
 
   render() {
     return (
-      <div>
-      </div>
+      <MatchList match_data={this.state.api.getMatchSchedule_debug()} />
     )
   }
 }
 
 export default App;
-
-// APP api所持
-//--MatchList spl2_match
-//---TimeZone base_match[] 
-//----Schedule rule_ex maps_ex

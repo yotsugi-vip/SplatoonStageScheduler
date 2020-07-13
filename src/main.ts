@@ -12,8 +12,8 @@ function CreateWindow() {
         maximizable: false,      // フルスクリーン禁止(lINUX以外)
         minWidth: 400,
         minHeight: 300,
-        maxWidth: 800,
-        maxHeight: 600,
+ //       maxWidth: 800,
+ //       maxHeight: 600,
         webPreferences: {
             nodeIntegration: true // Nodeモジュール使用
         }
