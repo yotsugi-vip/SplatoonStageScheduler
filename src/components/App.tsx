@@ -17,7 +17,11 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{backgroundImage:`url(${back})`}}>
+      <div style={{
+        backgroundImage: `url(${back})`,
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed"
+      }}>
         <MatchList match_data={this.state.api.getMatchSchedule_debug()} />
       </div>
     )

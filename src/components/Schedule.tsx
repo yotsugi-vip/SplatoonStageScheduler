@@ -79,10 +79,26 @@ class Schedule extends Component {
     this.state = { base_match: this.props.base_match, rule: this.props.rule };
   }
 
+  getStyle(ruleName: string): React.CSSProperties {
+    let a: React.CSSProperties;
+    a = { fontSize: "16px" };
+
+    if (ruleName === "レギュラーマッチ") {
+      a.color = "rgb(134, 223, 2)";
+    } else if (ruleName === "ガチマッチ") {
+      a.color = "orangered";
+    } else {
+      a.color = "rgb(255, 0, 106)";
+    }
+
+    return a;
+
+  }
+
   render() {
     return (
-      <div style={{ border: "solid 2px" }}>
-        <p style={{ fontSize: "16px" }}>{this.state.rule}</p>
+      <div style={{ border: "solid 2px", backgroundColor: "rgba(240,240,240,0.15)" }}>
+        <p style={this.getStyle(this.state.rule)}>{this.state.rule}</p>
         <p style={{ fontSize: "12px" }}>{this.state.base_match.rule_ex.name}</p>
         <MapImage map_ex={this.state.base_match.maps_ex} />
         <p style={{ fontSize: "12px" }}>{this.state.base_match.maps_ex[0].name}</p>
