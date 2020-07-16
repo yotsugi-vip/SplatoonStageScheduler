@@ -15,12 +15,16 @@ const match_file: string = "match_schedule.json";
 class spla2api {
     cache_coop = String();
     cache_match = String();
+    cache_image = String();
 
     constructor(tmpPath: string) {
         this.cache_coop = urljoin(tmpPath, coop_file);
         this.cache_match = urljoin(tmpPath, match_file);
-        console.log(this.cache_coop);
-        console.log(this.cache_match);
+        this.cache_image = urljoin(tmpPath, img_cache)
+
+        if (!fs.existsSync(this.cache_image)) {
+            fs.mkdirSync(this.cache_image);
+        }
     }
 
     private async getSchedule(isCoop: boolean) {

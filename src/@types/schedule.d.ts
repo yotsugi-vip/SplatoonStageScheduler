@@ -54,3 +54,13 @@ interface base_coop extends splaTime {
 interface spl2_coop extends splaTime {
     result: Array<base_coop>;
 }
+
+declare module "*.png" {
+    const content: string;
+    export default content;
+}
+
+declare module "*.jpg" {
+    const content: string;
+    export default content;
+}

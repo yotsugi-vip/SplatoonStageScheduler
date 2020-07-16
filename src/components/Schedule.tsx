@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import * as picture from './picture';
 // APP api所持
 //--MatchList spl2_match
 //---TimeZone base_match[] 
@@ -19,18 +19,9 @@ class MatchList extends Component {
     return (
       // APIから時間帯別のリストを必要分生成する方法が思いつかない
       <>
-        <TimeZone gachi={this.state.match_data.result.gachi[0]} league={this.state.match_data.result.league[0]} regular={this.state.match_data.result.regular[0]} />
-        <TimeZone gachi={this.state.match_data.result.gachi[1]} league={this.state.match_data.result.league[1]} regular={this.state.match_data.result.regular[1]} />
-        <TimeZone gachi={this.state.match_data.result.gachi[2]} league={this.state.match_data.result.league[2]} regular={this.state.match_data.result.regular[2]} />
-        <TimeZone gachi={this.state.match_data.result.gachi[3]} league={this.state.match_data.result.league[3]} regular={this.state.match_data.result.regular[3]} />
-        <TimeZone gachi={this.state.match_data.result.gachi[4]} league={this.state.match_data.result.league[4]} regular={this.state.match_data.result.regular[4]} />
-        <TimeZone gachi={this.state.match_data.result.gachi[5]} league={this.state.match_data.result.league[5]} regular={this.state.match_data.result.regular[5]} />
-        <TimeZone gachi={this.state.match_data.result.gachi[6]} league={this.state.match_data.result.league[6]} regular={this.state.match_data.result.regular[6]} />
-        <TimeZone gachi={this.state.match_data.result.gachi[7]} league={this.state.match_data.result.league[7]} regular={this.state.match_data.result.regular[7]} />
-        <TimeZone gachi={this.state.match_data.result.gachi[8]} league={this.state.match_data.result.league[8]} regular={this.state.match_data.result.regular[8]} />
-        <TimeZone gachi={this.state.match_data.result.gachi[9]} league={this.state.match_data.result.league[9]} regular={this.state.match_data.result.regular[9]} />
-        <TimeZone gachi={this.state.match_data.result.gachi[10]} league={this.state.match_data.result.league[10]} regular={this.state.match_data.result.regular[10]} />
-        <TimeZone gachi={this.state.match_data.result.gachi[11]} league={this.state.match_data.result.league[11]} regular={this.state.match_data.result.regular[11]} />
+        {this.state.match_data.result.regular.map((match, i) => (
+          <TimeZone regular={match} gachi={this.state.match_data.result.gachi[i]} league={this.state.match_data.result.league[i]} />
+        ))}
       </>
     )
   }
@@ -112,13 +103,27 @@ class MapImage extends Component {
     this.state = { map_ex: this.props.map_ex };
   }
 
-  checkImgChash(): string {
+  _checkImgChash(): string {
     // キャッシュを確認する。
-    return dummy_img;
+    //return dummy_img;
+    return picture.stage(this.state.map_ex[0].name);
+  }
+
+  getStageImage(stageName: string): string {
+    return picture.stage(stageName);
   }
 
   render() {
-    return <img src={this.checkImgChash()} alt="stage image" />
+    return (<>{
+      this.state.map_ex.map((map, i) => (
+        <img src={this.getStageImage(map.name)}
+          style={i == 0 ? { width: "200px", height: "130px", clipPath: " polygon(99% 0, 0 99%, 0 0)", position: "absolute" }
+            : { width: "200px", height: "130px", clipPath: "polygon(100% 1%, 1% 100%, 100% 100%)" }}
+          alt="stage image" />
+      ))
+    }</>)
+
+    //return <img src={this.checkImgChash()} style={{ width: "200px", height: "130px" }} alt="stage image" />
   }
 }
 

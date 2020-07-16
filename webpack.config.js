@@ -44,12 +44,19 @@ const render = {
                 test: /\.(ts|tsx)?$/,
                 use: "ts-loader",
                 exclude: /node_modules/
-            }
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]',
+                },
+            },
         ]
     },
 
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".json"]
+        extensions: [".ts", ".tsx", ".js", ".json"],
     },
 
     devtool: "source-map",
