@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import AppBar from 'material-ui';
+
 import spla2api from '../api/spla2api';
 import MatchList from './Schedule';
 import back from '../picture/back_normal.jpg';
@@ -17,6 +19,7 @@ class App extends Component {
 
   render() {
     return (
+
       <div style={{
         backgroundImage: `url(${back})`,
         backgroundRepeat: "no-repeat",

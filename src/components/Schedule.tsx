@@ -53,7 +53,10 @@ class TimeZone extends Component {
         border: "solid 2px",
         margin: "8px"
       }}>
-        <p>{this.start_time}:00 ~ {this.end_time}:00</p>
+        <p style={{
+          fontSize:"20px",
+          fontWeight:"bolder"
+        }}>{this.start_time}:00 ～ {this.end_time}:00</p>
         <ul style={{
           display: "flex",
           justifyContent: "space-around",
@@ -69,6 +72,24 @@ class TimeZone extends Component {
   }
 }
 
+import gachi_img from '../picture/gachi.png';
+import nawabari_img from '../picture/nawabari.png';
+import league_img from '../picture/league.png';
+import hoko_img from '../picture/hoko.png';
+import asari_img from '../picture/asari.png';
+import tower_img from '../picture/tower.png';
+import area_img from '../picture/area.png';
+
+const img_style: React.CSSProperties = {
+  width: "50px",
+  height: "auto",
+  padding: "0",
+}
+
+const p_style: React.CSSProperties = {
+  fontSize: "12px",
+  margin: "0"
+}
 interface IState_S { base_match: base_match, rule: string }
 interface IProps_S { base_match: base_match, rule: string }
 class Schedule extends Component {
@@ -82,7 +103,7 @@ class Schedule extends Component {
   getStyle(ruleName: string): React.CSSProperties {
     let a: React.CSSProperties;
     a = { fontSize: "16px" };
-
+    a.margin = "0";
     if (ruleName === "レギュラーマッチ") {
       a.color = "rgb(134, 223, 2)";
     } else if (ruleName === "ガチマッチ") {
@@ -90,25 +111,63 @@ class Schedule extends Component {
     } else {
       a.color = "rgb(255, 0, 106)";
     }
-
     return a;
-
   }
+
+  getIcon(ruleName: string): string {
+    let src: string;
+
+    if (ruleName === "レギュラーマッチ") {
+      src = nawabari_img;
+    } else if (ruleName === "ガチマッチ") {
+      src = gachi_img;
+    } else if (ruleName === "リーグマッチ") {
+      src = league_img;
+    } else if (ruleName === "ガチホコバトル") {
+      src = hoko_img;
+    } else if (ruleName === "ガチエリア") {
+      src = area_img;
+    } else if (ruleName === "ガチヤグラ") {
+      src = tower_img;
+    } else if (ruleName === "ガチアサリ") {
+      src = asari_img;
+    } else {
+      src = null;
+    }
+
+    return src;
+  }
+
 
   render() {
     return (
-      <div style={{ border: "solid 2px", backgroundColor: "rgba(240,240,240,0.15)" }}>
+      <div style={{ border: "solid 2px", backgroundColor: "rgba(240,240,240,0.15)", height: "100%" }}>
+        {this.state.rule === "レギュラーマッチ"
+          ?
+          <div style={{ padding: "5px 0 0 0" }}>
+            <img src={this.getIcon(this.state.rule)} style={img_style} />
+          </div>
+          :
+          <div style={{
+            display: "flex",
+            listStyle: "none",
+            justifyContent: "space-around",
+            padding: "5px 0 0 0"
+          }}>
+            <img src={this.getIcon(this.state.rule)} style={img_style} />
+            <img src={this.getIcon(this.state.base_match.rule_ex.name)} style={img_style} />
+          </div>
+        }
         <p style={this.getStyle(this.state.rule)}>{this.state.rule}</p>
-        <p style={{ fontSize: "12px" }}>{this.state.base_match.rule_ex.name}</p>
+        <p style={p_style}>{this.state.base_match.rule_ex.name}</p>
         <MapImage map_ex={this.state.base_match.maps_ex} />
-        <p style={{ fontSize: "12px" }}>{this.state.base_match.maps_ex[0].name}</p>
-        <p style={{ fontSize: "12px" }}>{this.state.base_match.maps_ex[1].name}</p>
-      </div>
+        <p style={p_style}>{this.state.base_match.maps_ex[0].name}</p>
+        <p style={p_style}>{this.state.base_match.maps_ex[1].name}</p>
+      </div >
     )
   }
 }
 
-const dummy_img: string = "https://placehold.jp/200x130.png";
 interface IState_MI { map_ex: maps_ex[] }
 interface IProps_MI { map_ex: maps_ex[] }
 class MapImage extends Component {
