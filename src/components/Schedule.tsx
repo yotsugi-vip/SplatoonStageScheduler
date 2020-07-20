@@ -20,7 +20,7 @@ class MatchList extends Component {
       // APIから時間帯別のリストを必要分生成する方法が思いつかない
       <>
         {this.state.match_data.result.regular.map((match, i) => (
-          <TimeZone regular={match} gachi={this.state.match_data.result.gachi[i]} league={this.state.match_data.result.league[i]} />
+          <TimeZone regular={match} gachi={this.state.match_data.result.gachi[i]} league={this.state.match_data.result.league[i]} key={i} />
         ))}
       </>
     )
@@ -54,8 +54,8 @@ class TimeZone extends Component {
         margin: "8px"
       }}>
         <p style={{
-          fontSize:"20px",
-          fontWeight:"bolder"
+          fontSize: "20px",
+          fontWeight: "bolder"
         }}>{this.start_time}:00 ～ {this.end_time}:00</p>
         <ul style={{
           display: "flex",
@@ -194,7 +194,7 @@ class MapImage extends Component {
         <img src={this.getStageImage(map.name)}
           style={i == 0 ? { width: "200px", height: "130px", clipPath: " polygon(99% 0, 0 99%, 0 0)", position: "absolute" }
             : { width: "200px", height: "130px", clipPath: "polygon(100% 1%, 1% 100%, 100% 100%)" }}
-          alt="stage image" />
+          alt="stage image" key={i} />
       ))
     }</>)
 

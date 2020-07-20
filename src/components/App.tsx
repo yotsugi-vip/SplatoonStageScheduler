@@ -3,11 +3,7 @@ import spla2api from '../api/spla2api';
 import MatchList from './Schedule';
 import back from '../picture/back_normal.jpg';
 import app from 'electron';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
-import HomeIcon from '@material-ui/icons/Home';
+import Surface from './Surface';
 
 const cache_path = app.remote.app.getPath("userData");
 
@@ -23,12 +19,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <AppBar position="static">
-          <Tabs>
-            <Tab label="Battle" icon={<HomeIcon />}></Tab>
-            <Tab label="Salmon Run" icon={<RestaurantMenuIcon />}></Tab>
-          </Tabs>
-        </AppBar>
+        <Surface />
         <div style={{
           backgroundImage: `url(${back})`,
           backgroundRepeat: "no-repeat",
@@ -37,6 +28,8 @@ class App extends Component {
           <MatchList match_data={this.state.api.getMatchSchedule_debug()} />
         </div>
       </>
+      // AppBarを固定するかのボタン
+      // 一番上にスクロールするボタン
     )
   }
 }
