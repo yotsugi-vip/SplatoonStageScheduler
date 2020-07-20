@@ -64,10 +64,10 @@ class spla2api {
         return schedule;
     }
 
-    getCoopSchedule_debug(): spl2_match {
+    getCoopSchedule_debug(): spl2_coop {
         let path: string = "./tmp_json/coopSchedule.json";
         let file = fs.readFileSync(path, "utf8");
-        let schedule: spl2_match = JSON.parse(file);
+        let schedule: spl2_coop = JSON.parse(file);
         return schedule;
     }
 }

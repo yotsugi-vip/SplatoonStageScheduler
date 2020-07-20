@@ -4,6 +4,7 @@ import MatchList from './Schedule';
 import back from '../picture/back_normal.jpg';
 import app from 'electron';
 import Surface from './Surface';
+import Coop from './Coop';
 
 const cache_path = app.remote.app.getPath("userData");
 
@@ -19,17 +20,17 @@ class App extends Component {
   render() {
     return (
       <>
-        <Surface />
         <div style={{
           backgroundImage: `url(${back})`,
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed"
         }}>
-          <MatchList match_data={this.state.api.getMatchSchedule_debug()} />
+          <Surface
+            coop={<Coop base_coop={this.state.api.getCoopSchedule_debug()} />}
+            match={<MatchList match_data={this.state.api.getMatchSchedule_debug()} />}
+          />
         </div>
       </>
-      // AppBarを固定するかのボタン
-      // 一番上にスクロールするボタン
     )
   }
 }

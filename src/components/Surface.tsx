@@ -7,9 +7,15 @@ interface IState {
     isDisplayBattle: Boolean
 };
 
+interface IProps {
+    coop: React.ReactElement;
+    match: React.ReactElement;
+}
+
 class Surface extends Component {
     state: IState;
-    constructor(props) {
+    props: IProps;
+    constructor(props: IProps) {
         super(props);
         this.state = {
             isDisplayBattle: true
@@ -46,8 +52,8 @@ class Surface extends Component {
 
                 <div>
                     {this.state.isDisplayBattle
-                        ? <p>TRUE</p>
-                        : <p>FALSE</p>
+                        ? this.props.match
+                        : this.props.coop
                     }
                 </div>
             </>

@@ -47,11 +47,11 @@ interface coop_weapon {
 }
 
 interface base_coop extends splaTime {
-    stage: coop_stage;
-    weapons: Array<coop_weapon>
+    stage?: coop_stage;
+    weapons?: Array<coop_weapon>
 }
 
-interface spl2_coop extends splaTime {
+interface spl2_coop {
     result: Array<base_coop>;
 }
 
