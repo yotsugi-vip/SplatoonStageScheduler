@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import Switch from '@material-ui/core/Switch';
-import FormControlLabel from '@material-ui/core/FormControlLabel'
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Tab from '@material-ui/core/Tab';
+import Tabs from '@material-ui/core/Tabs';
+import AppBar from '@material-ui/core/AppBar';
 
 interface IState {
     isDisplayBattle: Boolean
@@ -35,7 +38,8 @@ class Surface extends Component {
             <>
                 <div style={{
                     display: "flex",
-                    justifyContent: "space-around"
+                    justifyContent: "space-around",
+                    margin: "15px 0 10px 0"
                 }}>
                     <Button variant="contained" size="large" onClick={this.onChangeBattle}>
                         <p style={{ margin: "0", color: "green" }}>Battle</p>
@@ -50,12 +54,19 @@ class Surface extends Component {
                     />
                 </div>
 
-                <div>
-                    {this.state.isDisplayBattle
-                        ? this.props.match
-                        : this.props.coop
-                    }
-                </div>
+
+                {this.state.isDisplayBattle
+                    ?
+                    <div>
+                        {this.props.match}
+                    </div>
+                    :
+                    <div style={{
+                        margin: "0 10% 0 10%"
+                    }}>
+                        {this.props.coop}
+                    </div>
+                }
             </>
             // AppBarを固定するかのボタン
             // 一番上にスクロールするボタン
