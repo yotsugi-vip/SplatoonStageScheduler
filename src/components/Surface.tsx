@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
-import Switch from '@material-ui/core/Switch';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Tab from '@material-ui/core/Tab';
-import Tabs from '@material-ui/core/Tabs';
 import AppBar from '@material-ui/core/AppBar';
 
 interface IState {
@@ -36,23 +32,22 @@ class Surface extends Component {
     render() {
         return (
             <>
-                <div style={{
-                    display: "flex",
-                    justifyContent: "space-around",
-                    margin: "15px 0 10px 0"
-                }}>
-                    <Button variant="contained" size="large" onClick={this.onChangeBattle}>
-                        <p style={{ margin: "0", color: "green" }}>Battle</p>
-                    </Button>
-                    <Button variant="contained" size="large" onClick={this.onChangeCoop}>
-                        <p style={{ margin: "0", color: "orange" }}>SalmonRun</p>
-                    </Button>
-                    <FormControlLabel
-                        label="Floating"
-                        labelPlacement="bottom"
-                        control={<Switch />}
-                    />
-                </div>
+                <AppBar position="sticky" style={{ backgroundColor: "#f5f5f5" }}>
+
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "space-around",
+                        marginTop: "5px",
+                        marginBottom: "10px"
+                    }}>
+                        <Button variant="contained" size="large" onClick={this.onChangeBattle} style={{ padding: "0" }}>
+                            <p style={{ margin: "0", color: "green" }}>Battle</p>
+                        </Button>
+                        <Button variant="contained" size="large" onClick={this.onChangeCoop} style={{ padding: "0" }}>
+                            <p style={{ margin: "0", color: "orange"}}>SalmonRun</p>
+                        </Button>
+                    </div>
+                </AppBar>
 
 
                 {this.state.isDisplayBattle

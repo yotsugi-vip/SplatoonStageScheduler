@@ -20,12 +20,11 @@ class MatchList extends Component {
 
   render() {
     return (
-      // APIから時間帯別のリストを必要分生成する方法が思いつかない
-      <>
+      <div style={{marginBottom:"10px"}}>
         {this.state.match_data.result.regular.map((match, i) => (
           <TimeZone regular={match} gachi={this.state.match_data.result.gachi[i]} league={this.state.match_data.result.league[i]} key={i} />
         ))}
-      </>
+      </div>
     )
   }
 }

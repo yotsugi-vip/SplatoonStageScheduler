@@ -45,7 +45,7 @@ class Coop extends Component {
         return (
             <div>
                 {this.state.base_coop.result.map((base_coop, i) => (
-                    <div key={i} style={{ marginBottom: "10px" }}>
+                    <div key={i} style={{ marginBottom: "5px",marginTop:"5px" }}>
                         <Card>
                             <CardHeader
                                 title={new Date(base_coop.start).getHours().toString() + ":00 ～ " + new Date(base_coop.end).getHours() + ":00"}
