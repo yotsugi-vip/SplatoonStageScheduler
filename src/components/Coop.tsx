@@ -9,6 +9,8 @@ import shaketoba from '../picture/海上集落シャケト場.png';
 import donburako from '../picture/難破船ドン・ブラコ.png';
 import polaris from '../picture/朽ちた箱舟 ポラリス.png';
 
+import a from '../picture/tmp/スプラチャージャー.png';
+
 interface IProps_APP { base_coop: spl2_coop }
 interface IState_APP { base_coop: spl2_coop }
 class Coop extends Component {
@@ -43,7 +45,7 @@ class Coop extends Component {
         return (
             <div>
                 {this.state.base_coop.result.map((base_coop, i) => (
-                    <div key={i} style={{ margin: "0 0 10px 0" }}>
+                    <div key={i} style={{ marginBottom: "10px" }}>
                         <Card>
                             <CardHeader
                                 title={new Date(base_coop.start).getHours().toString() + ":00 ～ " + new Date(base_coop.end).getHours() + ":00"}
@@ -57,8 +59,21 @@ class Coop extends Component {
                                     title="stage"
                                 >
                                     {base_coop.weapons.map((weapon, i) => (
-                                        <div key={weapon.name + i}>
-                                            <p>{weapon.name}</p>
+                                        <div key={weapon.name + i} style={{ display: "flex" }}>
+                                            <img src={a} alt="buki" style={{
+                                                height: "50px",
+                                                width: "auto",
+                                                clipPath: "circle(50% at 50% 50%)"
+                                            }} />
+                                            <p style={{
+                                                WebkitTextStroke: "0.5px white",
+                                                fontWeight: "bold",
+                                                marginLeft: "5px",
+                                                verticalAlign: "middle"
+                                            }}
+                                            >
+                                                {weapon.name}
+                                            </p>
                                         </div>
                                     ))}
                                 </CardMedia>

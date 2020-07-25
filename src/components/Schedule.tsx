@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import * as picture from './picture';
+import Paper from '@material-ui/core/Paper';
+import Card from '@material-ui/core/Card';
+
 // APP api所持
 //--MatchList spl2_match
 //---TimeZone base_match[] 
@@ -49,24 +52,30 @@ class TimeZone extends Component {
   render() {
     return (
       <div style={{
-        textAlign: "center",
-        border: "solid 2px",
-        margin: "8px"
+        margin: "2%",
       }}>
-        <p style={{
-          fontSize: "20px",
-          fontWeight: "bolder"
-        }}>{this.start_time}:00 ～ {this.end_time}:00</p>
-        <ul style={{
-          display: "flex",
-          justifyContent: "space-around",
-          listStyleType: "none",
-          paddingLeft: "0"
-        }}>
-          <li style={{ width: "233px" }}><Schedule base_match={this.state.regular} rule="レギュラーマッチ" /></li>
-          <li style={{ width: "233px" }}><Schedule base_match={this.state.gachi} rule="ガチマッチ" /></li>
-          <li style={{ width: "233px" }}><Schedule base_match={this.state.league} rule="リーグマッチ" /></li>
-        </ul>
+        <Paper style={{backgroundColor:"#f5f5f5"}}>
+          <div style={{
+            textAlign: "center",
+          }}>
+            <p style={{
+              fontSize: "20px",
+              fontWeight: "bolder",
+              margin: "0"
+            }}>{this.start_time}:00 ～ {this.end_time}:00</p>
+            <ul style={{
+              display: "flex",
+              justifyContent: "space-around",
+              listStyleType: "none",
+              paddingLeft: "0",
+              margin: "0"
+            }}>
+              <li style={{ width: "233px" }}><Schedule base_match={this.state.regular} rule="レギュラーマッチ" /></li>
+              <li style={{ width: "233px" }}><Schedule base_match={this.state.gachi} rule="ガチマッチ" /></li>
+              <li style={{ width: "233px" }}><Schedule base_match={this.state.league} rule="リーグマッチ" /></li>
+            </ul>
+          </div>
+        </Paper>
       </div>
     )
   }
@@ -141,29 +150,30 @@ class Schedule extends Component {
 
   render() {
     return (
-      <div style={{ border: "solid 2px", backgroundColor: "rgba(240,240,240,0.15)", height: "100%" }}>
-        {this.state.rule === "レギュラーマッチ"
-          ?
-          <div style={{ padding: "5px 0 0 0" }}>
-            <img src={this.getIcon(this.state.rule)} style={img_style} />
-          </div>
-          :
+      <Card style={{marginBottom:"8px"}}>
+        <div style={{  backgroundColor: "rgba(240,240,240,0.15)" }}>
           <div style={{
+            padding: "5px 0 0 0",
             display: "flex",
-            listStyle: "none",
             justifyContent: "space-around",
-            padding: "5px 0 0 0"
           }}>
-            <img src={this.getIcon(this.state.rule)} style={img_style} />
-            <img src={this.getIcon(this.state.base_match.rule_ex.name)} style={img_style} />
+            {this.state.rule === "レギュラーマッチ"
+              ?
+              <img src={this.getIcon(this.state.rule)} style={img_style} />
+              :
+              <>
+                <img src={this.getIcon(this.state.rule)} style={img_style} />
+                <img src={this.getIcon(this.state.base_match.rule_ex.name)} style={img_style} />
+              </>
+            }
           </div>
-        }
-        <p style={this.getStyle(this.state.rule)}>{this.state.rule}</p>
-        <p style={p_style}>{this.state.base_match.rule_ex.name}</p>
-        <MapImage map_ex={this.state.base_match.maps_ex} />
-        <p style={p_style}>{this.state.base_match.maps_ex[0].name}</p>
-        <p style={p_style}>{this.state.base_match.maps_ex[1].name}</p>
-      </div >
+          <p style={this.getStyle(this.state.rule)}>{this.state.rule}</p>
+          <p style={p_style}>{this.state.base_match.rule_ex.name}</p>
+          <MapImage map_ex={this.state.base_match.maps_ex} />
+          <p style={p_style}>{this.state.base_match.maps_ex[0].name}</p>
+          <p style={p_style}>{this.state.base_match.maps_ex[1].name}</p>
+        </div >
+      </Card>
     )
   }
 }
