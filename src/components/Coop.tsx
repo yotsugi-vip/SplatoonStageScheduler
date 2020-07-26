@@ -8,18 +8,20 @@ import tokisirazu from '../picture/トキシラズいぶし工房.png';
 import shaketoba from '../picture/海上集落シャケト場.png';
 import donburako from '../picture/難破船ドン・ブラコ.png';
 import polaris from '../picture/朽ちた箱舟 ポラリス.png';
+import spla2api from '../api/spla2api';
 
-import a from '../picture/tmp/スプラチャージャー.png';
+import salmon from '../picture/salmon.png';
+import Button from '@material-ui/core/Button';
 
-interface IProps_APP { base_coop: spl2_coop }
-interface IState_APP { base_coop: spl2_coop }
+interface IProps_APP { base_coop: spl2_coop, api: spla2api }
+interface IState_APP { base_coop: spl2_coop, api: spla2api }
 class Coop extends Component {
     state: IState_APP;
     props: IProps_APP;
 
     constructor(props: IProps_APP) {
         super(props);
-        this.state = { base_coop: this.props.base_coop }
+        this.state = { base_coop: this.props.base_coop, api: this.props.api }
     }
 
     getStage(name: string): string {
@@ -41,11 +43,15 @@ class Coop extends Component {
         return ret;
     }
 
+    scrollTop() {
+        window.scrollTo(0, 0);
+    }
+
     render() {
         return (
             <div>
                 {this.state.base_coop.result.map((base_coop, i) => (
-                    <div key={i} style={{ marginBottom: "5px",marginTop:"5px" }}>
+                    <div key={i} style={{ marginBottom: "5px", marginTop: "5px" }}>
                         <Card>
                             <CardHeader
                                 title={new Date(base_coop.start).getHours().toString() + ":00 ～ " + new Date(base_coop.end).getHours() + ":00"}
@@ -60,7 +66,7 @@ class Coop extends Component {
                                 >
                                     {base_coop.weapons.map((weapon, i) => (
                                         <div key={weapon.name + i} style={{ display: "flex" }}>
-                                            <img src={a} alt="buki" style={{
+                                            <img src={this.state.api.getWeaponImage(weapon)} alt="buki" style={{
                                                 height: "50px",
                                                 width: "auto",
                                                 clipPath: "circle(50% at 50% 50%)"
@@ -83,7 +89,18 @@ class Coop extends Component {
                         </Card>
                     </div>
                 ))}
-
+                <Button onClick={this.scrollTop}
+                    style={{
+                        position: "fixed",
+                        bottom: "10px",
+                        right: "5px"
+                    }}
+                >
+                    <ul style={{ listStyle: "none", padding: "0", margin: "0" }}>
+                        <li><img src={salmon} style={{ height: "50px", width: "auto" }} /></li>
+                        <li><p style={{ margin: "0", color: "orange", WebkitTextStroke: "0.5px white", fontWeight: "bolder" }}>TOP</p></li>
+                    </ul>
+                </Button>
             </div>
         )
     }

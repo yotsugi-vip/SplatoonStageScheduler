@@ -6,6 +6,8 @@ const BrowserWindow = electron.BrowserWindow || require('browser-window');
 const Menu = electron.Menu;
 var mainWindow = null;
 
+// スケジュールの取得とキャッシュ作業は完全にmain側で行う方針
+
 function CreateWindow() {
     Menu.setApplicationMenu(null);
     mainWindow = new BrowserWindow({

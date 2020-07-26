@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import * as picture from './picture';
 import Paper from '@material-ui/core/Paper';
 import Card from '@material-ui/core/Card';
-
+import ika from '../picture/ika.png';
+import Button from '@material-ui/core/Button';
 // APP api所持
 //--MatchList spl2_match
 //---TimeZone base_match[] 
@@ -18,13 +19,31 @@ class MatchList extends Component {
     this.state = { match_data: this.props.match_data }
   }
 
+  scrollTop() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
-      <div style={{marginBottom:"10px"}}>
-        {this.state.match_data.result.regular.map((match, i) => (
-          <TimeZone regular={match} gachi={this.state.match_data.result.gachi[i]} league={this.state.match_data.result.league[i]} key={i} />
-        ))}
-      </div>
+      <>
+        <div style={{ marginBottom: "10px" }}>
+          {this.state.match_data.result.regular.map((match, i) => (
+            <TimeZone regular={match} gachi={this.state.match_data.result.gachi[i]} league={this.state.match_data.result.league[i]} key={i} />
+          ))}
+        </div>
+        <Button onClick={this.scrollTop}
+          style={{
+            position: "fixed",
+            bottom: "10px",
+            right: "5px"
+          }}
+        >
+          <ul style={{ listStyle: "none", padding: "0", margin: "0" }}>
+            <li><img src={ika} style={{ height: "50px", width: "auto" }} /></li>
+            <li><p style={{ margin: "0", color: "#ff00ff", WebkitTextStroke: "0.5px white", fontWeight: "bolder" }}>TOP</p></li>
+          </ul>
+        </Button>
+      </>
     )
   }
 }
@@ -53,7 +72,7 @@ class TimeZone extends Component {
       <div style={{
         margin: "2%",
       }}>
-        <Paper style={{backgroundColor:"#f5f5f5"}}>
+        <Paper style={{ backgroundColor: "#f5f5f5" }}>
           <div style={{
             textAlign: "center",
           }}>
@@ -149,8 +168,8 @@ class Schedule extends Component {
 
   render() {
     return (
-      <Card style={{marginBottom:"8px"}}>
-        <div style={{  backgroundColor: "rgba(240,240,240,0.15)" }}>
+      <Card style={{ marginBottom: "8px" }}>
+        <div style={{ backgroundColor: "rgba(240,240,240,0.15)" }}>
           <div style={{
             padding: "5px 0 0 0",
             display: "flex",
@@ -198,16 +217,18 @@ class MapImage extends Component {
   }
 
   render() {
-    return (<>{
-      this.state.map_ex.map((map, i) => (
-        <img src={this.getStageImage(map.name)}
-          style={i == 0 ? { width: "200px", height: "130px", clipPath: " polygon(99% 0, 0 99%, 0 0)", position: "absolute" }
-            : { width: "200px", height: "130px", clipPath: "polygon(100% 1%, 1% 100%, 100% 100%)" }}
-          alt="stage image" key={i} />
-      ))
-    }</>)
-
-    //return <img src={this.checkImgChash()} style={{ width: "200px", height: "130px" }} alt="stage image" />
+    return (
+      <>
+        {
+          this.state.map_ex.map((map, i) => (
+            <img src={this.getStageImage(map.name)}
+              style={i == 0 ? { width: "200px", height: "130px", clipPath: " polygon(99% 0, 0 99%, 0 0)", position: "absolute" }
+                : { width: "200px", height: "130px", clipPath: "polygon(100% 1%, 1% 100%, 100% 100%)" }}
+              alt="stage image" key={i} />
+          ))
+        }
+      </>
+    )
   }
 }
 

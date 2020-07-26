@@ -22,10 +22,12 @@ class Surface extends Component {
     }
 
     onChangeBattle = () => {
+        if (!this.state.isDisplayBattle) window.scrollTo(0, 0);
         this.setState({ isDisplayBattle: true });
     };
 
     onChangeCoop = () => {
+        if (this.state.isDisplayBattle) window.scrollTo(0, 0);
         this.setState({ isDisplayBattle: false });
     };
 
@@ -44,7 +46,7 @@ class Surface extends Component {
                             <p style={{ margin: "0", color: "green" }}>Battle</p>
                         </Button>
                         <Button variant="contained" size="large" onClick={this.onChangeCoop} style={{ padding: "0" }}>
-                            <p style={{ margin: "0", color: "orange"}}>SalmonRun</p>
+                            <p style={{ margin: "0", color: "orange" }}>SalmonRun</p>
                         </Button>
                     </div>
                 </AppBar>
@@ -63,8 +65,6 @@ class Surface extends Component {
                     </div>
                 }
             </>
-            // AppBarを固定するかのボタン
-            // 一番上にスクロールするボタン
         )
     }
 }
