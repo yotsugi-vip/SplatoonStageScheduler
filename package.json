@@ -1,5 +1,5 @@
 {
-  "name": "sss_ts-react",
+  "name": "splatoonstagescheduler",
   "version": "2.0.0",
   "description": "splatoon2 stage scheduler",
   "repository": "https://github.com/yotsugi-vip/SplatoonStageScheduler",
@@ -35,10 +35,15 @@
     "node-fetch": "^2.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "url-join": "^4.0.1"
+    "url-join": "^4.0.1",
+    "yarn": "^1.22.4"
   },
   "build": {
     "productName": "SplatoonStageScheduler",
-    "appId": "dev.vip.splatoon.stage.scheduler"
+    "appId": "dev.vip.splatoon.stage.scheduler",
+    "icon" : "./build/**/*",
+    "files":[
+      "./build/**/*"
+    ]
   }
 }

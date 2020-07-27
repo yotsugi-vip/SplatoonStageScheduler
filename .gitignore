@@ -1,6 +1,5 @@
 node_modules
-test
-cache
 dist
-package-lock.json
-build
+build/*.js
+build/*.map
+build/src

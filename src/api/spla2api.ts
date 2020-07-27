@@ -19,8 +19,8 @@ class spla2api {
     cache_match = String();
     cache_image = String();
 
-    constructor( ) {
-        let tmpPath = ipcRenderer.sendSync('request', 'tmpPath'); 
+    constructor() {
+        let tmpPath = ipcRenderer.sendSync('request', 'tmpPath');
         this.cache_coop = path.join(tmpPath, coop_file);
         this.cache_match = path.join(tmpPath, match_file);
         this.cache_image = path.join(tmpPath, img_cache)
@@ -52,14 +52,14 @@ class spla2api {
     }
 
     getMatchSchedule(): spl2_match {
-        if (!this.checkSavedSchedule(false)) this.getSchedule(false);
+        if (!this.checkSavedSchedule(false)) this.getSchedule(false).then(() => { });
         let file = fs.readFileSync(this.cache_match, "utf8");
         let schedule: spl2_match = JSON.parse(file);
         return schedule;
     }
 
     getCoopSchedule(): spl2_coop {
-        if (!this.checkSavedSchedule(true)) this.getSchedule(true);
+        if (!this.checkSavedSchedule(true)) this.getSchedule(true).then(() => { });
         let file = fs.readFileSync(this.cache_coop, "utf8");
         let schedule: spl2_coop = JSON.parse(file);
         return schedule;
@@ -90,7 +90,7 @@ class spla2api {
                 ))
             ));
         } else {
-            console.log(weapon.name + "is cashed")
+            console.log(weapon.name + "is cashed");
         }
         return weaponPath;
     }
