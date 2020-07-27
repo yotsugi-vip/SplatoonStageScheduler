@@ -42,8 +42,13 @@
     "productName": "SplatoonStageScheduler",
     "appId": "dev.vip.splatoon.stage.scheduler",
     "icon" : "./build/**/*",
-    "files":[
-      "./build/**/*"
+    "asar": true,
+		"npmRebuild": false,
+		"files": [
+			"index.html",
+			"build/**/*",
+			"node_modules/**/*"
     ]
+
   }
 }

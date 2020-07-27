@@ -3,7 +3,7 @@ const path = require("path");
 /** @type import('webpack').Configuration */
 const main = {
     target: "electron-main",
-    mode: "development",
+    mode: "production",
     entry: "./src/main.ts",
     output: {
         filename: "main.js",
@@ -31,7 +31,7 @@ const main = {
 /** @type import('webpack').Configuration */
 const render = {
     target: "electron-renderer",
-    mode: "development",
+    mode: "production",
     entry: "./src/index.tsx",
     output: {
         filename: "bundle.js",
@@ -46,7 +46,7 @@ const render = {
                 exclude: /node_modules/
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(png|jpg|gif)$/i,
                 loader: 'file-loader',
                 options: {
                     name: '[path][name].[ext]',

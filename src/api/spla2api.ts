@@ -29,70 +29,120 @@ class spla2api {
         }
     }
 
-    private async getSchedule(isCoop: boolean) {
-        console.log("スケジュール取得");
-        let url = urljoin(endpoint, isCoop ? paramCoop : paramMatch);
-        let res = await fetch(url, { method: 'GET', headers: { 'User-Agent': userAgent } });
-        let body = await res.json();
-        fs.writeFileSync(isCoop ? this.cache_coop : this.cache_match, JSON.stringify(body, null, "\t"), "utf8");
-    }
-
-    private checkSavedSchedule(isCoop: boolean): boolean {
-        if (!fs.existsSync(isCoop ? this.cache_coop : this.cache_match)) return false;
-        let file = fs.readFileSync(isCoop ? this.cache_coop : this.cache_match, "utf8");
-        let schedule = JSON.parse(file);
-        let battleSchedule = Date.parse(isCoop ? schedule.result[0].end_utc : schedule.result.regular[0].end_utc);
-
-        if (battleSchedule < Date.now()) {
-            console.log(isCoop ? "サーモンランのスケジュール古いため取得します" : "マッチのスケジュール古いため取得します");
+    isExistCache(isCoop: boolean): boolean {
+        console.log('キャッシュ確認', isCoop ? ' Coop' : ' Match')
+        if (!fs.existsSync(isCoop ? this.cache_coop : this.cache_match)) {
+            console.log('ないです');
             return false;
         }
-        console.log(isCoop ? "サーモンランのスケジュールは最新です" : "マッチのスケジュールは最新です");
+        console.log('あるんご');
         return true;
     }
 
-    getMatchSchedule(): spl2_match {
-        if (!this.checkSavedSchedule(false)) this.getSchedule(false).then(() => { });
+    isLatestMatchSchedule(): boolean {
+        console.log('最新か確認')
+        let ret: boolean;
+        let file = fs.readFileSync(this.cache_match, "utf8");
+        let schedule: spl2_match = JSON.parse(file);
+        let battleSchedule = Date.parse(schedule.result.regular[0].end_utc);
+
+        if (battleSchedule < Date.now()) {
+            console.log("マッチのスケジュール古いため取得します");
+            ret = false;
+        } else {
+            console.log("マッチのスケジュールは最新です");
+            ret = true;
+        }
+        return ret;
+    }
+
+    isLatestCoopSchedule(): boolean {
+        console.log('最新か確認')
+        let ret: boolean;
+        let file = fs.readFileSync(this.cache_coop, "utf8");
+        let schedule: base_coop = JSON.parse(file);
+        let battleSchedule = Date.parse(schedule.end_utc);
+
+        if (battleSchedule < Date.now()) {
+            console.log("サーモンランのスケジュール古いため取得します");
+            ret = false;
+        } else {
+            console.log("サーモンランのスケジュールは最新です");
+            ret = true;
+        }
+        return ret;
+    }
+
+    private async getMatch(): Promise<void> {
+        let url = urljoin(endpoint, paramMatch);
+        let res = await fetch(url, { method: 'GET', headers: { 'User-Agent': userAgent } });
+        let body = await res.json();
+        fs.writeFileSync(this.cache_match, JSON.stringify(body, null, "\t"), "utf8");
+    }
+
+    private async getCoop(): Promise<void> {
+        let url = urljoin(endpoint, paramCoop);
+        let res = await fetch(url, { method: 'GET', headers: { 'User-Agent': userAgent } });
+        let body = await res.json();
+        fs.writeFileSync(this.cache_coop, JSON.stringify(body, null, "\t"), "utf8");
+    }
+
+    async getMatchSchedule(): Promise<spl2_match> {
+        if (!this.isExistCache(false)) {
+            await this.getMatch();
+            console.log('マッチデータ取得');
+        }
+
+        if (!this.isLatestMatchSchedule()) {
+            await this.getMatch();
+            console.log('マッチデータ取得');
+        }
+
         let file = fs.readFileSync(this.cache_match, "utf8");
         let schedule: spl2_match = JSON.parse(file);
         return schedule;
     }
 
-    getCoopSchedule(): spl2_coop {
-        if (!this.checkSavedSchedule(true)) this.getSchedule(true).then(() => { });
+    async getCoopSchedule(): Promise<spl2_coop> {
+        if (!this.isExistCache(true)) {
+            await this.getCoop();
+            console.log('サーモンランデータ取得');
+        }
+
+        if (!this.isLatestCoopSchedule()) {
+            await this.getCoop();
+            console.log('サーモンランデータ取得');
+        }
+
         let file = fs.readFileSync(this.cache_coop, "utf8");
         let schedule: spl2_coop = JSON.parse(file);
+
+        // 先に画像キャッシュ確認
+        this.checkAllWeaponImg(schedule);
+
         return schedule;
     }
 
-    getMatchSchedule_debug(): spl2_match {
-        let path: string = "./tmp_json/matchSchedule.json";
-        let file = fs.readFileSync(path, "utf8");
-        let schedule: spl2_match = JSON.parse(file);
-        return schedule;
-    }
-
-    getCoopSchedule_debug(): spl2_coop {
-        let path: string = "./tmp_json/coopSchedule.json";
-        let file = fs.readFileSync(path, "utf8");
-        let schedule: spl2_coop = JSON.parse(file);
-        return schedule;
+    private checkAllWeaponImg(coop: spl2_coop) {
+        coop.result.map(base => {
+            if (base.weapons !== null) {
+                base.weapons.map(async weapon => {
+                    let imgPath = path.join(this.cache_image, weapon.name + ".png");
+                    if (!fs.existsSync(imgPath)) {
+                        console.log(weapon.name, 'isnot cached');
+                        let res = await fetch(weapon.image);
+                        let buff = await res.arrayBuffer();
+                        fs.writeFileSync(imgPath, new Uint8Array(buff), 'binary');
+                    } else {
+                        console.log(weapon.name, 'is cached');
+                    }
+                })
+            }
+        })
     }
 
     getWeaponImage(weapon: coop_weapon): string {
-        const weaponPath = urljoin(this.cache_image, weapon.name + ".png");
-
-        if (!fs.existsSync(weaponPath)) {
-            console.log(weapon.name + "is not cashed");
-            fetch(weapon.image).then(res => (
-                res.arrayBuffer().then(buff => (
-                    fs.writeFileSync(weaponPath, new Uint8Array(buff), 'binary')
-                ))
-            ));
-        } else {
-            console.log(weapon.name + "is cashed");
-        }
-        return weaponPath;
+        return path.join(this.cache_image, weapon.name + '.png');
     }
 }
 
