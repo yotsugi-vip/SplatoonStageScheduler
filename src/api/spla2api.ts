@@ -2,6 +2,7 @@ import fetch from 'node-fetch';
 import urljoin from 'url-join';
 import fs from 'fs';
 import path from 'path';
+import { ipcRenderer } from 'electron';
 
 const endpoint: string = "https://spla2.yuu26.com";
 const paramMatch: string = "schedule";
@@ -18,7 +19,8 @@ class spla2api {
     cache_match = String();
     cache_image = String();
 
-    constructor(tmpPath: string) {
+    constructor( ) {
+        let tmpPath = ipcRenderer.sendSync('request', 'tmpPath'); 
         this.cache_coop = path.join(tmpPath, coop_file);
         this.cache_match = path.join(tmpPath, match_file);
         this.cache_image = path.join(tmpPath, img_cache)
@@ -40,7 +42,7 @@ class spla2api {
         let file = fs.readFileSync(isCoop ? this.cache_coop : this.cache_match, "utf8");
         let schedule = JSON.parse(file);
         let battleSchedule = Date.parse(isCoop ? schedule.result[0].end_utc : schedule.result.regular[0].end_utc);
-        
+
         if (battleSchedule < Date.now()) {
             console.log(isCoop ? "サーモンランのスケジュール古いため取得します" : "マッチのスケジュール古いため取得します");
             return false;
@@ -63,7 +65,6 @@ class spla2api {
         return schedule;
     }
 
-    /*
     getMatchSchedule_debug(): spl2_match {
         let path: string = "./tmp_json/matchSchedule.json";
         let file = fs.readFileSync(path, "utf8");
@@ -77,7 +78,6 @@ class spla2api {
         let schedule: spl2_coop = JSON.parse(file);
         return schedule;
     }
-    */
 
     getWeaponImage(weapon: coop_weapon): string {
         const weaponPath = urljoin(this.cache_image, weapon.name + ".png");
