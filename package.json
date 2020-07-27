@@ -1,6 +1,6 @@
 {
   "name": "sss_ts-react",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "description": "splatoon2 stage scheduler",
   "repository": "https://github.com/yotsugi-vip/SplatoonStageScheduler",
   "author": "yotsugi",
@@ -32,7 +32,6 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@material-ui/lab": "^4.0.0-alpha.56",
     "node-fetch": "^2.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
