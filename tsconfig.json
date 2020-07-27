@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "es2015",
+    "types": [
+      "node"
+    ],
+    "lib": [
+      "es2019",
+      "dom"
+    ],
+    "allowJs": true, // jsコンパイル用
+    "checkJs": true, // js簡易型チェック
+    "sourceMap": true,
+    "inlineSources": true,
+    "noImplicitAny": false,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "outDir": "./build",
+    "typeRoots": [
+      "node_modules/@types",
+      "src/@types"
+    ],
+
+  }
+}

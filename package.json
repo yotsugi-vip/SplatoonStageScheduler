@@ -1,47 +1,45 @@
 {
-  "name": "splatoonstagescheduler",
-  "version": "1.0.0",
-  "description": "splatoon stage scheduler",
-  "main": "./src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node_modules/.bin/electron .",
-    "release": "node build-linux",
-    "start": "electron .",
-    "electron": "electron index.js",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yotugi-vip/SplatoonStageScheduler.git"
-  },
-  "author": "yotugi",
+  "name": "sss_ts-react",
+  "version": "0.0.0",
+  "description": "splatoon2 stage scheduler",
+  "repository": "https://github.com/yotsugi-vip/SplatoonStageScheduler",
+  "author": "yotsugi",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yotugi-vip/SplatoonStageScheduler/issues"
-  },
-  "homepage": "https://github.com/yotugi-vip/SplatoonStageScheduler#readme",
-  "dependencies": {
-    "log4js": "^5.1.0",
-    "node-fetch": "^2.6.0",
-    "package.json": "^2.0.1"
-  },
-  "build": {
-    "appId": "com.electron.ssss",
-    "icon": "build",
-    "linux": {
-      "target": "deb",
-      "maintainer": "youigi",
-      "vendor": "yotugi",
-      "synopsis": "splatoon stage scheduler",
-      "description": "",
-      "category": "Game",
-      "desktop": "sss.desktop"
-    }
+  "main": "build/main.js",
+  "scripts": {
+    "build": "webpack",
+    "dist": "electron-builder",
+    "test": "webpack && electron ."
   },
   "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/node": "^14.0.14",
+    "@types/node-fetch": "^2.5.7",
+    "@types/react": "^16.9.41",
+    "@types/react-dom": "^16.9.8",
+    "@types/url-join": "^4.0.0",
+    "@types/webpack": "^4.41.21",
+    "@types/material-ui": "^0.21.7",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "electron": "^9.1.0",
-    "electron-builder": "^21.2.0"
+    "electron-builder": "^22.7.0",
+    "file-loader": "^6.0.0",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "node-fetch": "^2.6.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "url-join": "^4.0.1"
+  },
+  "build": {
+    "productName": "SplatoonStageScheduler",
+    "appId": "dev.vip.splatoon.stage.scheduler"
   }
 }

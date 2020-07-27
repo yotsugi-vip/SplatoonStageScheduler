@@ -1,0 +1,102 @@
+{
+	"result": [
+		{
+			"start": "2020-07-25T21:00:00",
+			"start_utc": "2020-07-25T12:00:00+00:00",
+			"start_t": 1595678400,
+			"end": "2020-07-27T15:00:00",
+			"end_utc": "2020-07-27T06:00:00+00:00",
+			"end_t": 1595829600,
+			"stage": {
+				"image": "https://app.splatoon2.nintendo.net/images/coop_stage/50064ec6e97aac91e70df5fc2cfecf61ad8615fd.png",
+				"name": "朽ちた箱舟 ポラリス"
+			},
+			"weapons": [
+				{
+					"id": -1,
+					"image": "https://app.splatoon2.nintendo.net/images/coop_weapons/746f7e90bc151334f0bf0d2a1f0987e311b03736.png",
+					"name": "？"
+				},
+				{
+					"id": -1,
+					"image": "https://app.splatoon2.nintendo.net/images/coop_weapons/746f7e90bc151334f0bf0d2a1f0987e311b03736.png",
+					"name": "？"
+				},
+				{
+					"id": -1,
+					"image": "https://app.splatoon2.nintendo.net/images/coop_weapons/746f7e90bc151334f0bf0d2a1f0987e311b03736.png",
+					"name": "？"
+				},
+				{
+					"id": -1,
+					"image": "https://app.splatoon2.nintendo.net/images/coop_weapons/746f7e90bc151334f0bf0d2a1f0987e311b03736.png",
+					"name": "？"
+				}
+			]
+		},
+		{
+			"start": "2020-07-27T21:00:00",
+			"start_utc": "2020-07-27T12:00:00+00:00",
+			"start_t": 1595851200,
+			"end": "2020-07-29T09:00:00",
+			"end_utc": "2020-07-29T00:00:00+00:00",
+			"end_t": 1595980800,
+			"stage": {
+				"image": "https://app.splatoon2.nintendo.net/images/coop_stage/e9f7c7b35e6d46778cd3cbc0d89bd7e1bc3be493.png",
+				"name": "トキシラズいぶし工房"
+			},
+			"weapons": [
+				{
+					"id": 4000,
+					"image": "https://app.splatoon2.nintendo.net/images/weapon/2a1c5ca0e68919b4d655bd860cac3b2942b95498.png",
+					"name": "スプラスピナー"
+				},
+				{
+					"id": 40,
+					"image": "https://app.splatoon2.nintendo.net/images/weapon/e1d09fc9502a81c82137c8dcd5a872eb872af697.png",
+					"name": "スプラシューター"
+				},
+				{
+					"id": 310,
+					"image": "https://app.splatoon2.nintendo.net/images/weapon/45e8847cbaf09bdc86c6e6627236286781b09f0f.png",
+					"name": "H3リールガン"
+				},
+				{
+					"id": 2030,
+					"image": "https://app.splatoon2.nintendo.net/images/weapon/a6279990ad871fccdd9f2a64a2951f8726f45c48.png",
+					"name": "リッター4K"
+				}
+			]
+		},
+		{
+			"start": "2020-07-29T15:00:00",
+			"start_utc": "2020-07-29T06:00:00+00:00",
+			"start_t": 1596002400,
+			"end": "2020-07-31T03:00:00",
+			"end_utc": "2020-07-30T18:00:00+00:00",
+			"end_t": 1596132000,
+			"stage": null,
+			"weapons": null
+		},
+		{
+			"start": "2020-07-31T09:00:00",
+			"start_utc": "2020-07-31T00:00:00+00:00",
+			"start_t": 1596153600,
+			"end": "2020-08-01T21:00:00",
+			"end_utc": "2020-08-01T12:00:00+00:00",
+			"end_t": 1596283200,
+			"stage": null,
+			"weapons": null
+		},
+		{
+			"start": "2020-08-02T03:00:00",
+			"start_utc": "2020-08-01T18:00:00+00:00",
+			"start_t": 1596304800,
+			"end": "2020-08-03T21:00:00",
+			"end_utc": "2020-08-03T12:00:00+00:00",
+			"end_t": 1596456000,
+			"stage": null,
+			"weapons": null
+		}
+	]
+}
