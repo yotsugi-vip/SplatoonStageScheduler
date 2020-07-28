@@ -105,7 +105,7 @@ import league_img from '../picture/league.png';
 import hoko_img from '../picture/hoko.png';
 import asari_img from '../picture/asari.png';
 import tower_img from '../picture/tower.png';
-import area_img from '../picture/area.jpg';
+import area_img from '../picture/area.png';
 
 const img_style: React.CSSProperties = {
   width: "50px",
