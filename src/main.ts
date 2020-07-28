@@ -18,8 +18,8 @@ function CreateWindow() {
             nodeIntegration: true // Nodeモジュール使用
         }
     });
-    mainWindow.loadFile("index.html");
-    mainWindow.webContents.openDevTools();
+    mainWindow.loadFile("build/index.html");
+    //mainWindow.webContents.openDevTools();
 
     mainWindow.on("closed", () => {
         mainWindow = null;

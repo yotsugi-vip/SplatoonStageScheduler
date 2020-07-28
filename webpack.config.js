@@ -49,7 +49,7 @@ const render = {
                 test: /\.(png|jpg|gif)$/i,
                 loader: 'file-loader',
                 options: {
-                    name: 'build/[path][name].[ext]',
+                    name: '[path][name].[ext]',
                 },
             },
         ]

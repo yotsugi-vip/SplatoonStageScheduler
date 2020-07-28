@@ -3,4 +3,4 @@ dist
 build/*.js
 build/*.map
 build/src
-build/**/*
+build/build
