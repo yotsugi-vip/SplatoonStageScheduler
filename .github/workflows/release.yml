@@ -44,7 +44,7 @@ jobs:
           mkdir artifacts
           mv dist/*.dmg artifacts
       - name: Cleanup artifacts Ubuntu
-        if: matrix.os == 'ubuntu-latesttest'
+        if: matrix.os == 'ubuntu-latest'
         run: |
           mkdir artifacts
           mv dist/*.deb artifacts
