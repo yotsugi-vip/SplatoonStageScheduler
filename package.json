@@ -8,7 +8,7 @@
   "main": "build/main.js",
   "scripts": {
     "build": "webpack",
-    "dist": "electron-builder",
+    "dist": "electron-builder --publish never",
     "test": "webpack && electron ."
   },
   "devDependencies": {
