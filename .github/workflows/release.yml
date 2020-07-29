@@ -33,16 +33,21 @@ jobs:
         run: |
           yarn run build
           yarn run dist
-      - name: Cleanup artifacts
-        if: matrix.os != 'windows-latest'
-        run: |
-          mkdir artifacts
-          mv dist/*.{exe,deb,AppImage,dmg} artifacts
       - name: Cleanup artifacts Win
         if: matrix.os == 'windows-latest'
         run: |
           mkdir artifacts
           mv dist/*.exe artifacts
+      - name: Cleanup artifacts Mac
+        if: matrix.os == 'macOS-latest'
+        run: |
+          mkdir artifacts
+          mv dist/*.dmg artifacts
+      - name: Cleanup artifacts Ubuntu
+        if: matrix.os == 'ubuntu-latesttest'
+        run: |
+          mkdir artifacts
+          mv dist/*.deb artifacts
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:
