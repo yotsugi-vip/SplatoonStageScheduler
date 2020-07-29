@@ -41,14 +41,22 @@
   "build": {
     "productName": "SplatoonStageScheduler",
     "appId": "dev.vip.splatoon.stage.scheduler",
-    "icon" : "./build/**/*",
+    "icon": "./build/**/*",
     "asar": true,
-		"npmRebuild": false,
-		"files": [
-			"index.html",
-			"build/**/*",
-			"node_modules/**/*"
-    ]
-
+    "npmRebuild": false,
+    "files": [
+      "index.html",
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "linux": {
+      "target": "deb",
+      "maintainer": "yotsugi",
+      "vendor": "yotsugi",
+      "synopsis": "splatoon stage scheduler",
+      "description": "",
+      "category": "Game",
+      "desktop": "SplatoonStageScheduler.desktop"
+    }
   }
 }
