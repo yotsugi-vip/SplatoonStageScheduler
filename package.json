@@ -51,6 +51,7 @@
     ],
     "linux": {
       "target": "deb",
+      "icon":"build/icon_512.png",
       "maintainer": "yotsugi",
       "vendor": "yotsugi",
       "synopsis": "splatoon stage scheduler",
