@@ -32,7 +32,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "url-join": "^4.0.1",
